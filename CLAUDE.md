@@ -4,6 +4,15 @@ Instructions for Claude. Five teammates each point their own Claude at this one 
 
 This folder is the single source of truth. If a fact, decision, or interview is not written in this folder, the team does not have it. Decisions made in meetings or on WhatsApp count only once someone records them here.
 
+The team's shared copy lives in the GitHub repo (rldser1986/sonoma-fyre-research). Your Cowork folder is a local git clone of it, so "this folder" and "the repo" mean the same body of work, kept in step with git. See Syncing with the team below.
+
+## Syncing with the team (git)
+This folder is a git clone, not a Drive-synced folder, so nothing updates on its own. Keep it in step by hand:
+- Start of every session: run `git pull` before reading or writing, so you have teammates' latest work.
+- After changes worth sharing: `git add`, `git commit` with a clear message that names the teammate and what changed, then `git push`.
+- If a pull or push reports a conflict, stop and surface it to your teammate. Never resolve a conflict by guessing or by discarding someone's work.
+- Commit small and often, one topic per commit, so history stays readable and merges stay clean.
+
 ## The project in five lines
 - Course: Applied Innovation Immersion Week (AIIW) 2026, UC Berkeley Haas, XMBA 290P.1.
 - Topic: reversing declining wine demand, told through one Sonoma winery as protagonist (pick pending, see Open decisions).
@@ -15,9 +24,10 @@ This folder is the single source of truth. If a fact, decision, or interview is 
 Jiahan Ericsson and Rohit Mishra (slides and story), Allison Leow and Rodolfo Lagos (research and economics), Alexa Kornau (outreach and interview logistics). Interviews themselves are everyone's job: the syllabus requires at least 2 per member.
 
 ## At the start of every task
-1. Read `readme-index.md` for the folder map, then `master-synthesis.md` for where findings stand. Do this before answering research questions or writing anything.
-2. Know which teammate you are working for; ask once if unclear. Date and sign their name on everything you add (log rows, interview notes, changelog lines).
-3. The folder beats your general knowledge. When they disagree on something material, say so explicitly.
+1. Run `git pull` to get the team's latest work before anything else (see Syncing with the team).
+2. Read `readme-index.md` for the folder map, then `master-synthesis.md` for where findings stand. Do this before answering research questions or writing anything.
+3. Know which teammate you are working for; ask once if unclear. Date and sign their name on everything you add (log rows, interview notes, changelog lines).
+4. The folder beats your general knowledge. When they disagree on something material, say so explicitly.
 
 ## Where work goes
 - Source and article analysis: `research-readings/`. Register every new source in `research-readings/sources.md` (file, title, outlet, exact date, author, URL).
@@ -29,11 +39,11 @@ Jiahan Ericsson and Rohit Mishra (slides and story), Allison Leow and Rodolfo La
 ## Naming and versions
 - kebab-case, lowercase, no spaces: `monte-rio-interview-notes.md`. Date-prefix time-sensitive files: `2026-07-15-two-shepherds-notes.md`. (`CLAUDE.md` is a platform convention and the one uppercase exception.)
 - One canonical file per topic. Supersede by replacing the old file's content, never by adding `-v2`, `-final`, or a near-duplicate. Every duplicate makes five Claudes give five different answers.
-- Files named `Copy of ...` or ending `(1)` are Drive sync collisions: do not cite or edit them; flag them for cleanup.
+- Do not commit sync-collision or scratch files (`Copy of ...`, names ending `(1)`, editor temp files). If a git merge leaves conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) in a file, resolve them with your teammate before committing; never leave them in.
 - If a `memory.md` or similar auto-memory file appears here, it belongs to one member's Claude, not to the team. Do not treat it as team truth; flag it so its owner can move it out.
 
 ## master-synthesis.md protocol
-- Re-read the live file immediately before editing it; a teammate may have just synced a change.
+- Run `git pull`, then re-read the live file immediately before editing it; a teammate may have just pushed a change.
 - Merge, never overwrite. Integrate new findings into the existing text. Do not delete or rewrite a teammate's contribution unless new evidence supersedes it, and then record what was replaced and why in the changelog.
 - No claim enters without a citation (next section).
 - Evidence that contradicts the current text goes into Open questions as a named conflict. Never silently pick a side.

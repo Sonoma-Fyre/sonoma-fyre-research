@@ -1,6 +1,6 @@
 # cowork-research: Team Sonoma Fyre
 
-Single source of truth for our Applied Innovation Immersion Week research (reversing declining wine demand, Sonoma). Each teammate connects their own Claude to this shared folder through the Google Drive connector, so we all work from the same knowledge. Keep everything we want shared inside this folder.
+Single source of truth for our Applied Innovation Immersion Week research (reversing declining wine demand, Sonoma). The shared copy lives in a GitHub repo (rldser1986/sonoma-fyre-research); each teammate works in a local git clone connected to their own Claude Cowork project, kept in step with `git pull` and `git push`. Keep everything we want shared inside this folder and push it.
 
 ## Folder map
 - `CLAUDE.md`: the team working rules. Every member's Claude reads and follows it; teammates should skim it once.
