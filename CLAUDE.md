@@ -7,11 +7,13 @@ This folder is the single source of truth. If a fact, decision, or interview is 
 The team's shared copy lives in the GitHub repo (rldser1986/sonoma-fyre-research). Your Cowork folder is a local git clone of it, so "this folder" and "the repo" mean the same body of work, kept in step with git. See Syncing with the team below.
 
 ## Syncing with the team (git)
-This folder is a git clone, not a Drive-synced folder, so nothing updates on its own. Keep it in step by hand:
-- Start of every session: run `git pull` before reading or writing, so you have teammates' latest work.
-- After changes worth sharing: `git add`, `git commit` with a clear message that names the teammate and what changed, then `git push`.
-- If a pull or push reports a conflict, stop and surface it to your teammate. Never resolve a conflict by guessing or by discarding someone's work.
-- Commit small and often, one topic per commit, so history stays readable and merges stay clean.
+This folder is a git clone, not a Drive-synced folder, so nothing updates on its own. We never commit to `main` directly; every change lands through a reviewed pull request.
+- Start of every session: `git checkout main` then `git pull` to get teammates' latest work.
+- Start new work on a branch: `git checkout -b <type>/<short-topic>`, for example `research/two-shepherds-notes` or `docs/pr-workflow`.
+- Commit small and often, one topic per commit, with a clear message that names the teammate and what changed.
+- Share it: `git push -u origin <branch>`, then open a pull request on GitHub for a teammate to review.
+- Merge only after at least one teammate approves. Delete the branch after it merges.
+- If a pull or merge reports a conflict, stop and surface it to your teammate. Never resolve a conflict by guessing or by discarding someone's work.
 
 ## The project in five lines
 - Course: Applied Innovation Immersion Week (AIIW) 2026, UC Berkeley Haas, XMBA 290P.1.
@@ -24,7 +26,7 @@ This folder is a git clone, not a Drive-synced folder, so nothing updates on its
 Jiahan Ericsson and Rohit Mishra (slides and story), Allison Leow and Rodolfo Lagos (research and economics), Alexa Kornau (outreach and interview logistics). Interviews themselves are everyone's job: the syllabus requires at least 2 per member.
 
 ## At the start of every task
-1. Run `git pull` to get the team's latest work before anything else (see Syncing with the team).
+1. Run `git checkout main` then `git pull` to get the team's latest work, and start your change on a new branch before anything else (see Syncing with the team).
 2. Read `readme-index.md` for the folder map, then `master-synthesis.md` for where findings stand. Do this before answering research questions or writing anything.
 3. Know which teammate you are working for; ask once if unclear. Date and sign their name on everything you add (log rows, interview notes, changelog lines).
 4. The folder beats your general knowledge. When they disagree on something material, say so explicitly.
@@ -43,7 +45,7 @@ Jiahan Ericsson and Rohit Mishra (slides and story), Allison Leow and Rodolfo La
 - If a `memory.md` or similar auto-memory file appears here, it belongs to one member's Claude, not to the team. Do not treat it as team truth; flag it so its owner can move it out.
 
 ## master-synthesis.md protocol
-- Run `git pull`, then re-read the live file immediately before editing it; a teammate may have just pushed a change.
+- Pull the latest `main` into your branch, then re-read the live file immediately before editing it; a teammate may have just merged a change.
 - Merge, never overwrite. Integrate new findings into the existing text. Do not delete or rewrite a teammate's contribution unless new evidence supersedes it, and then record what was replaced and why in the changelog.
 - No claim enters without a citation (next section).
 - Evidence that contradicts the current text goes into Open questions as a named conflict. Never silently pick a side.

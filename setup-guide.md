@@ -29,7 +29,7 @@ This clone is a working copy. It does not update on its own; you keep it in step
 
 ## Instructions to paste (Step 2.8)
 > Purpose: research support for Team Sonoma Fyre on reversing declining wine demand in Sonoma. This folder is a git clone of the shared repo (github.com/rldser1986/sonoma-fyre-research).
-> Sync rule (this repo does NOT auto-sync like Drive): at the start of every work session, run `git pull` to get teammates' latest changes. After making changes worth sharing, `git add`, `git commit` with a clear message, and `git push`. If a pull reports conflicts, stop and surface them rather than guessing.
+> Sync rule (this repo does NOT auto-sync like Drive, and we never commit to main directly): start each session with `git checkout main` then `git pull`. Do your work on a feature branch (`git checkout -b type/short-topic`), commit, `git push -u origin <branch>`, then open a pull request for a teammate to review. Merge only after approval. If a pull or merge reports conflicts, stop and surface them rather than guessing.
 > First rule: read `CLAUDE.md` in this folder at the start of every task and follow it exactly. It holds all team rules (source of truth, citations, naming, the AI-tools log, style, the master-synthesis protocol). If this paste ever disagrees with `CLAUDE.md`, follow `CLAUDE.md`; the file is maintained, this paste is not.
 > Fallback, only if `CLAUDE.md` is unreadable: the shared folder beats general knowledge; name the file for any fact you use; cite the file for any figure headed into a deliverable; log every AI research task in `ai-tools-log.md` (graded); concise plain prose, no em-dashes; deliverables US Letter, Arial, black, minimal styling.
 
