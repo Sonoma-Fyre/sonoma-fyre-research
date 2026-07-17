@@ -1,0 +1,60 @@
+# Research readings
+
+Source articles for the wine-demand project. Filenames are kebab-case; name the file when you use a fact from one. All nine are saved as PDF in this folder.
+
+## Saved as PDF (in this folder)
+
+| File | Title, source, date | URL |
+|---|---|---|
+| `oiv-2025-state-of-world-wine-sector.pdf` | State of the World Vine and Wine Sector in 2025 (OIV, 2026) | https://www.oiv.int/sites/default/files/2026-05/OIV-State_of_the_World_Wine_Sector_in_2025_0.pdf |
+| `nbc-2025-wine-decline-spending-drinking-less.pdf` | Wine sales drying up as Americans turn elsewhere (NBC News, 2025) | https://www.nbcnews.com/data-graphics/data-shows-wine-decline-consumers-spending-less-drinking-less-rcna187628 |
+| `gallup-2023-young-adults-drinking-less.pdf` | Young Adults in U.S. Drinking Less Than in Prior Decades (Gallup, Aug 2023) | https://news.gallup.com/poll/509690/young-adults-drinking-less-prior-decades.aspx |
+| `gallup-2024-alcohol-viewed-unhealthy.pdf` | Alcohol Consumption Increasingly Viewed as Unhealthy in U.S. (Gallup, Aug 2024) | https://news.gallup.com/poll/648413/alcohol-consumption-increasingly-viewed-unhealthy.aspx |
+| `ey-parthenon-2025-glp1-alcohol-market.pdf` | How GLP-1 is driving a new era of alcohol industry innovation (EY-Parthenon, 2025) | https://www.ey.com/en_us/insights/consumer-products/glp-1-shifts-alcohol-market-dynamics |
+| `sonoma-edc-2025-quarterly-economic-outlook.pdf` | Sonoma County Quarterly Economic Outlook Report (Sonoma County EDC, Nov 2025) | https://sonomaedc.org/Microsites/Economic%20Development%20Board/Documents/Reports/2025/2025_11%20Sonoma%20County%20Quarterly%20Economic%20Outlook%20Report.pdf |
+| `forbes-2026-sonoma-rare-opportunity.pdf` | Why Sonoma Has a Rare Opportunity in a Changing Wine Industry (Forbes, Apr 2026) | https://www.forbes.com/sites/laynerandolph/2026/04/30/why-sonoma-has-a-rare-opportunity-in-a-changing-wine-industry/ |
+| `press-democrat-2025-tasting-room-visits-decline.pdf` | Declining tasting room visits have Sonoma wineries fighting back (Press Democrat, Jul 2025) | https://www.pressdemocrat.com/2025/07/22/declining-tasting-room-visits-have-sonoma-wineries-fighting-back/ |
+| `sonoma-mag-2025-winemakers-dare-to-dream.pdf` | Facing a Wine Market Slump, Sonoma County Winemakers Dare to Dream (Sonoma Magazine, 2025) | https://www.sonomamag.com/facing-a-wine-market-slump-sonoma-county-winemakers-dare-to-dream/ |
+
+## Citation notes (verified against the PDFs, 2026-07-09)
+Confirmed by reading the source pages directly. Apply these fixes to the Project Outline:
+- `gallup-2024-alcohol-viewed-unhealthy.pdf`: byline is **Megan Brenan**, dated **August 13, 2024**. The outline cites "Saad, 2025"; both the author and the year are wrong. Correct to Brenan, 2024.
+- `gallup-2023-young-adults-drinking-less.pdf`: byline is **Lydia Saad**, dated **August 22, 2023**. The outline cites "McCarthy"; the author is wrong. Correct to Saad, 2023.
+- Filename: named `gallup-2024-alcohol-viewed-unhealthy.pdf` to match the article's actual date (August 13, 2024, not 2025). The physical PDF, this list, and the Sources key in `master-synthesis.md` all use the 2024 name now.
+
+## Added 2026-07-15 (Rodolfo, desk pass 2)
+
+These files are text captures made from the source pages on 2026-07-15; every load-bearing figure was verified against its page that day, but formatting, images, and full text are not preserved. Six of these sources are natively PDF online and worth re-saving in original form over the captures: `svb-2026-state-of-us-wine-industry.pdf` (original at https://www.vinetur.com/documentos/article/94880/2026-svb-state-of-the-u.s.-wine-industry-report.pdf), `turrentine-2026-crush-report-2025.pdf`, `terrain-2026-winescape-spring.pdf`, `anba-2025-na-industry-statistics.pdf`, `fogarty-2008-beer-wine-spirits-meta-analysis.pdf`, and `chandra-2025-us-wine-demand-elasticity.pdf` (URLs below fetch the originals directly).
+
+| File | Title, source, date, author | URL |
+|---|---|---|
+| `gallup-2025-drinking-rate-new-low.pdf` | U.S. Drinking Rate at New Low as Alcohol Concerns Surge (Gallup, Aug 13, 2025, Lydia Saad) | https://news.gallup.com/poll/693362/drinking-rate-new-low-alcohol-concerns-surge.aspx |
+| `svb-2026-state-of-us-wine-industry.pdf` | 25th annual State of the US Wine Industry Report (Silicon Valley Bank, Jan 15, 2026, Rob McMillan; capture from the PR Newswire release) | https://www.prnewswire.com/news-releases/silicon-valley-bank-releases-25th-annual-state-of-the-us-wine-industry-report-302661928.html |
+| `napa-register-2026-svb-june-dtc-survey.pdf` | SVB June wine report: DTC and tasting-room survey (Napa Valley Register, Jun 13, 2026, Keith Cousins) | https://napavalleyregister.com/news/svb-june-wine-report-napa-valley/article_ce5913c9-a53f-475a-9e5f-58e277db92a0.html |
+| `sovos-2026-dtc-wine-shipping-report.pdf` | 2026 Direct-to-Consumer Wine Shipping Report press release (Sovos ShipCompliant / WineBusiness Analytics, Jan 27, 2026) | https://sovos.com/press-releases/2026-direct-to-consumer-wine-shipping-report-reveals-record-declines-as-market-downturn-deepens/ |
+| `iwsr-2026-us-volume-down-5-percent.pdf` | US beverage alcohol consumption drops -5% in volume during 2025 (IWSR press release, May 11, 2026) | https://www.theiwsr.com/insight/press-release/us-beverage-alcohol-consumption-drops-5-in-volume-during-2025/ |
+| `iwsr-2026-economic-pressures-moderation.pdf` | Economic pressures drive continued US beverage alcohol decline (IWSR, Apr 1, 2026, Helen Jagger) | https://www.theiwsr.com/insight/economic-pressures-drive-continued-us-beverage-alcohol-decline/ |
+| `drinks-business-2026-wine-opinions-value-survey.pdf` | US wine drinkers turn to value bottles as consumption softens (The Drinks Business, Apr 2, 2026, James Bayley; Wine Opinions survey, Jan 2026, n=1,351) | https://www.thedrinksbusiness.com/2026/04/us-wine-drinkers-turn-to-value-bottles-as-consumption-softens/ |
+| `wine-opinions-2025-under-40-threats.pdf` | Wine Opinions research on threats to wine among ages 21-39 (PR Newswire, Jul 21, 2025, Wine Opinions / John Gillespie) | https://www.prnewswire.com/news-releases/wine-opinions-research-highlights-threats-to-growth-of-wine-consumption-among-beverage-alcohol-drinkers-in-ages-21-39-302509802.html |
+| `wmc-2025-millennials-largest-cohort.pdf` | New study finds millennials now largest US wine-drinking cohort (Wine Market Council, Dec 4, 2025) | https://winemarketcouncil.com/new-wine-market-council-study-finds-millennials-now-largest-u-s-wine-drinking-cohort/ |
+| `chandra-2025-us-wine-demand-elasticity.pdf` | Geographical indications and welfare: Evidence from US wine demand (American Journal of Agricultural Economics, 2025, Chandra, Moschini, Lade) | https://www.card.iastate.edu/files/inline-files/American_J_Agri_Economics-2024-Chandra-Geographical_indications_and_welfare_Evidence_from_US_wine_demand.pdf |
+| `fogarty-2008-beer-wine-spirits-meta-analysis.pdf` | The Demand for Beer, Wine and Spirits: Insights from a Meta Analysis Approach (AAWE Working Paper No. 31, Nov 2008, James Fogarty) | https://wine-economics.org/wp-content/uploads/2012/10/AAWE_WP31.pdf |
+| `turrentine-2026-crush-report-2025.pdf` | 2025 Crush Report press release (Turrentine Brokerage, Mar 13, 2026) | https://www.winebusiness.com/content/file/2025_Crush_Report_Press_Release(1).pdf |
+| `ey-2025-glp1-alcohol-update.pdf` | How GLP-1 is driving a new era of alcohol industry innovation, updated version (EY, Nov 10, 2025, Sean Harapko). Same URL as `ey-parthenon-2025-glp1-alcohol-market.pdf`; EY updated the page. Reaffirms the 44% / 82% GLP-1 figures and adds the 13.6% vs 2.1% CAGR projection and 2025 under-35 numbers. | https://www.ey.com/en_us/insights/consumer-products/glp-1-shifts-alcohol-market-dynamics |
+| `anba-2025-na-industry-statistics.pdf` | NA Industry Statistics, June 2025 (Adult Non-Alcoholic Beverage Association, NielsenIQ data to Dec 2024) | https://anba.org/wp-content/uploads/2025/07/ANBA-Industry-Statistics-June-2025.pdf |
+| `terrain-2026-winescape-spring.pdf` | Winescape, Spring 2026 (Terrain / American AgCredit, Chris Bitter) | https://www.terrainag.com/wp-content/uploads/2026/04/Winescape-Spring-26.pdf |
+| `bmo-2026-wine-market-report.pdf` | 2026 BMO Wine Market Report newsroom release (BMO, May 12, 2026, Adam Beak) | https://usnewsroom.bmo.com/2026-05-12-Higher-Wine-Spending-Masks-Ongoing-Industry-Challenges-2026-BMO-Wine-Market-Report |
+| `shanken-2026-wine-declines-moderate.pdf` | Wine industry declines moderate in latest retail data (Shanken News Daily, May 29, 2026, Juan Banaag) | https://www.shankennewsdaily.com/2026/05/29/39933/wine-industry-declines-moderate-in-latest-retail-data/ |
+| `wswa-2026-sipsource-forecast.pdf` | SipSource forecast signals continued headwinds, modest improvement ahead (WSWA, Jul 1, 2026) | https://www.wswa.org/news/wswas-latest-sipsourcer-forecast-signals-continued-industry-headwinds-modest-improvement-ahead |
+| `wine-institute-2026-us-consumption-bw166.pdf` | US Wine Consumption statistics page (Wine Institute, bw166/Gomberg-Fredrikson estimates, accessed Jul 15, 2026) | https://wineinstitute.org/our-industry/statistics/us-wine-consumption/ |
+| `sciencedaily-2026-cannabis-beverage-substitution.pdf` | Cannabis beverage users cut alcohol intake (ScienceDaily, Feb 17, 2026; study: Kruger et al., Journal of Psychoactive Drugs, University at Buffalo) | https://www.sciencedaily.com/releases/2026/02/260217005806.htm |
+| `forbes-2025-where-wine-won.pdf` | Where Wine Won in 2025, and What the Growth Signals Are Telling Us (Forbes, Dec 30, 2025, Erica Duecy) | https://www.forbes.com/sites/ericaduecy/2025/12/30/where-wine-won-in-2025---and-what-the-growth-signals-are-telling-us/ |
+| `tablas-creek-2026-tariffs-and-2025-sales.pdf` | Did tariffs on imported wines help American wineries? (Tablas Creek blog, Mar 2, 2026, Jason Haas) | https://blog.tablascreek.com/2026/03/did-tariffs-on-imported-wines-help-american-wineries-if-so-its-hard-to-see-how.html |
+| `giesen-2025-na-wine-five-years.pdf` | Giesen 0% celebrates five years as global leader in premium non-alcoholic wine (PR Newswire, Dec 16, 2025, Giesen Group; company-reported figures) | https://www.prweb.com/releases/giesen-0-celebrates-five-years-as-the-global-leader-in-premium-non-alcoholic-wine-302643205.html |
+| `vinepair-2025-wine-improvement-districts-debate.pdf` | The debate over Wine Improvement Districts (VinePair, Oct 7, 2025, John Sumners) | https://vinepair.com/articles/wine-improvement-districts-debate/ |
+| `kqed-2025-sonoma-wid-mixed-feelings.pdf` | Sonoma County wineries have mixed feelings on Wine Improvement District plan (KQED, Aug 19, 2025, Keith Mizuguchi) | https://www.kqed.org/news/12052743/sonoma-county-wineries-have-mixed-feelings-on-wine-improvement-district-plan |
+| `calagnet-2025-wid-challenges.pdf` | The challenges of establishing a Wine Improvement District (California Ag Network, Aug 22, 2025, bylined to Sonoma County Winegrowers) | https://californiaagnet.com/2025/08/22/the-challenges-of-establishing-a-wine-improvement-district/ |
+| `abridged-2025-lodi-wine-district.pdf` | Lodi Winery Business Improvement District approved (Abridged / PBS KVIE, Nov 10, 2025, updated Nov 18, Mike Dunne) | https://www.abridged.org/news/lodi-wine-assessment/ |
+| `northbaybiz-2025-wid-skeptic-oped.pdf` | Why I'm skeptical of a Sonoma County Wine Improvement District (NorthBay biz op-ed, Aug 28, 2025, no byline retrieved). Caution: its Temecula data-quality claims could not be independently verified; paraphrase only. | https://www.northbaybiz.com/2025/08/28/why-im-skeptical-of-a-sonoma-county-wine-improvement-district/ |
+| `ward-2006-commodity-checkoff-generic-advertising.pdf` | Commodity Checkoff Programs and Generic Advertising (Choices Magazine 21(2), Q2 2006, Ronald W. Ward) | https://www.choicesmagazine.org/2006-2/checkoff/2006-2-02.htm |
+| `wia-2026-sonoma-wine-orgs-unify.pdf` | Sonoma County's Wine Industry Set to Unify (Wine Industry Advisor press release, Jul 1, 2026) | https://wineindustryadvisor.com/2026/07/01/sonoma-countys-wine-industry-set-to-unify/ |
