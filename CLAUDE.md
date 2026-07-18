@@ -4,7 +4,7 @@ Instructions for Claude. Five teammates each point their own Claude at this one 
 
 This folder is the single source of truth. If a fact, decision, or interview is not written in this folder, the team does not have it. Decisions made in meetings or on WhatsApp count only once someone records them here.
 
-The team's shared copy lives in the GitHub repo (rldser1986/sonoma-fyre-research). Your Cowork folder is a local git clone of it, so "this folder" and "the repo" mean the same body of work, kept in step with git. See Syncing with the team below.
+The team's shared copy lives in the GitHub repo (Sonoma-Fyre/sonoma-fyre-research). Your Cowork folder is a local git clone of it, so "this folder" and "the repo" mean the same body of work, kept in step with git. See Syncing with the team below.
 
 ## Syncing with the team (git)
 This folder is a git clone, not a Drive-synced folder, so nothing updates on its own. We never commit to `main` directly; every change lands through a reviewed pull request.
