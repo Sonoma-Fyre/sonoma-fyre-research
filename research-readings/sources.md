@@ -58,3 +58,11 @@ These files are text captures made from the source pages on 2026-07-15; every lo
 | `northbaybiz-2025-wid-skeptic-oped.pdf` | Why I'm skeptical of a Sonoma County Wine Improvement District (NorthBay biz op-ed, Aug 28, 2025, no byline retrieved). Caution: its Temecula data-quality claims could not be independently verified; paraphrase only. | https://www.northbaybiz.com/2025/08/28/why-im-skeptical-of-a-sonoma-county-wine-improvement-district/ |
 | `ward-2006-commodity-checkoff-generic-advertising.pdf` | Commodity Checkoff Programs and Generic Advertising (Choices Magazine 21(2), Q2 2006, Ronald W. Ward) | https://www.choicesmagazine.org/2006-2/checkoff/2006-2-02.htm |
 | `wia-2026-sonoma-wine-orgs-unify.pdf` | Sonoma County's Wine Industry Set to Unify (Wine Industry Advisor press release, Jul 1, 2026) | https://wineindustryadvisor.com/2026/07/01/sonoma-countys-wine-industry-set-to-unify/ |
+
+## Added 2026-08-02 (Jiahan)
+
+Primary-source county data, not a news article, so registered as one row citing the publisher's page rather than one row per report-year PDF. Derived datasets built from it are in `research-readings/`, not saved as PDF here (annual PDFs are large and stay hosted at the county site).
+
+| Source | Title, publisher | URL | Derived files |
+|---|---|---|---|
+| Sonoma County Crop Reports | Annual Crop Report, Dept of Agriculture, Weights & Measures, Sonoma County (1928-present; wine-grape data extracted for 2000-2024) | https://sonomacounty.gov/natural-resources/agriculture-weights-and-measures/crop-reports | `sonoma-crop-report-wine-grapes-2000-2024.md` (methodology and data-quality notes), `sonoma-crop-report-wine-grapes-yearly-summary-2000-2024.csv`, `sonoma-crop-report-wine-grapes-variety-detail-2000-2024.csv` |
