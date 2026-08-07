@@ -15,6 +15,27 @@ This folder is a git clone, not a Drive-synced folder, so nothing updates on its
 - Merge only after at least one teammate approves. Delete the branch after it merges.
 - If a pull or merge reports a conflict, stop and surface it to your teammate. Never resolve a conflict by guessing or by discarding someone's work.
 
+### Working from a cloud Cowork session
+A Cowork session running in the cloud cannot run git inside this folder: the device bridge has no network to GitHub and cannot delete files. Claude: never run git in this folder from a cloud session. The workflow instead, in order:
+1. Teammate, terminal, session start: check `git status` is clean, then `git checkout main` and `git pull`, so the folder the session reads is current. If status shows uncommitted changes you do not recognize, stop and check whether another session left work there before touching anything.
+2. Claude, in its cloud workspace: clone fresh `main` from GitHub (the cloud side can read the public repo) and do all work there, on a properly named branch, following every rule in this file.
+3. Claude delivers one git bundle built from `main..<branch>` and names the branch. If the delivery-time pull (step 4) brings in commits newer than the bundle's base, say so in chat before pushing: Claude rebases onto the new `main` in the cloud, resolves any overlap (log rows appended by two branches are the usual case), and delivers a fresh bundle.
+4. Teammate, terminal, on delivery:
+   - `git checkout main` and `git pull` (required even after step 1: the bundle only applies if local `main` already contains the commit the branch was built on)
+   - `git fetch <path-to-bundle> <branch>:<branch>`
+   - `git switch <branch>` then `git push -u origin HEAD`
+   - `gh pr create --base main --fill --reviewer <teammate-username>` (no spaces in a comma-separated reviewer list)
+   - `git switch main`
+5. After a teammate approves and the PR merges: `git checkout main`, `git pull`, then `git branch -d <branch>`.
+Sessions running on the teammate's own computer have working git and use the normal branch-and-PR steps above instead.
+
+### Cowork cloud sandbox gotchas
+These bite only when a session runs in the Cowork cloud sandbox and reaches this folder through the device bridge. They do not happen when Cowork runs on your computer or when you use a normal Mac terminal, so the fix is usually to run the git step yourself in Terminal.
+- No network to GitHub from the bridge: `git pull` and `git push` in this folder fail with "403 from proxy after CONNECT". Do the file work in the session, then run pull and push from your own Mac terminal, or start the task in on-your-computer mode.
+- The bridge cannot delete files: `git checkout` fails partway with "unable to unlink ... Operation not permitted" on tracked files and leaves the working tree in a mixed state. No lock trick fixes this; do not switch branches in this folder from a cloud session.
+- Stranded `index.lock`: git through the bridge cannot delete its own lock file, so a leftover `.git/index.lock` blocks the next command, and even a read-only `git status` can leave one. The bridge cannot `rm` it either; rename it (`mv .git/index.lock .git/index.lock.old`) and retry. This clears the lock only; it does not make checkout or pull work (previous bullets).
+- `quote>` hang on commit: a commit message split across two lines inside one pair of quotes leaves the shell waiting at a `quote>` prompt. Keep each `-m` on one physical line, and press Control-C to escape a stuck prompt (nothing is committed).
+
 ## The project in five lines
 - Course: Applied Innovation Immersion Week (AIIW) 2026, UC Berkeley Haas, XMBA 290P.1.
 - Topic: reversing declining wine demand, told through one Sonoma winery as protagonist (pick pending, see Open decisions).
