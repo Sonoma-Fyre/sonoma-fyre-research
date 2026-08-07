@@ -1,0 +1,53 @@
+year,color,tons,price_per_ton_usd,notes
+2000,white,83761.7,NA,"per-color price unreachable in source PDF via fetch tool; combined narrative price 2038.71"
+2000,red,107026.9,NA,"per-color price unreachable in source PDF via fetch tool; combined narrative price 2038.71"
+2001,white,65871.8,NA,"per-color price unreachable in source PDF via fetch tool; combined narrative price 2156.83"
+2001,red,107711.5,NA,"per-color price unreachable in source PDF via fetch tool; combined narrative price 2156.83"
+2002,white,75321.5,NA,"per-color price unreachable in source PDF via fetch tool; combined narrative price 2055.39"
+2002,red,107817.6,NA,"per-color price unreachable in source PDF via fetch tool; combined narrative price 2055.39"
+2003,white,59904.2,NA,"per-color price unreachable in source PDF via fetch tool; combined narrative price 1947.38"
+2003,red,100863.9,NA,"per-color price unreachable in source PDF via fetch tool; combined narrative price 1947.38"
+2004,white,64719.6,1553.96,
+2004,red,101063.2,2093.13,
+2005,white,90966.5,1563.59,
+2005,red,139943.2,2099.84,
+2006,white,80600.7,1679.42,
+2006,red,135646.8,2197.01,
+2007,white,74283.9,1804.61,
+2007,red,124248.9,2273.63,
+2008,white,69563.6,1921.34,
+2008,red,99428.4,2488.59,
+2009,white,91957.6,NA,"per-color price unreachable in source PDF via fetch tool; combined narrative price 2186.61"
+2009,red,120717.0,NA,"per-color price unreachable in source PDF via fetch tool; combined narrative price 2186.61"
+2010,white,83500.0,1771.84,
+2010,red,108481.0,2211.07,
+2011,white,64800.3,1784.38,
+2011,red,101818.5,2301.97,
+2012,white,105351.7,1811.93,
+2012,red,161709.9,2453.74,
+2013,white,114173.8,1845.31,
+2013,red,156435.3,2558.50,
+2014,white,111613.9,1902.86,
+2014,red,144021.5,2685.05,
+2015,white,80535.1,2010.35,
+2015,red,101534.3,2819.84,
+2016,white,95852.3,2081.90,
+2016,red,130589.3,3008.75,
+2017,white,81309.7,2213.41,
+2017,red,124787.5,3219.57,
+2018,white,112401.7,2264.70,
+2018,red,163575.2,3227.84,
+2019,white,94740.1,2302.24,
+2019,red,135051.7,3254.92,
+2020,white,65174.9,2149.05,
+2020,red,82910.2,NA,"per-color price unreachable in source PDF via fetch tool"
+2021,white,84318.2,2191.56,
+2021,red,121693.0,NA,"per-color price unreachable in source PDF via fetch tool"
+2022,white,77208.7,2343.03,
+2022,red,113656.1,3270.74,
+2023,white,99116.3,NA,"per-color price unreachable in source PDF via fetch tool"
+2023,red,141785.7,NA,"per-color price unreachable in source PDF via fetch tool"
+2024,white,91990.7,NA,"per-color price unreachable in source PDF via fetch tool"
+2024,red,122519.0,NA,"per-color price unreachable in source PDF via fetch tool"
+2025,white,89120.8,NA,"per-color price unreachable in source PDF via fetch tool"
+2025,red,97725.0,NA,"per-color price unreachable in source PDF via fetch tool"

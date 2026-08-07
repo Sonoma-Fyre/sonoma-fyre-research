@@ -8,6 +8,12 @@ Two CSVs, both in this folder:
 - `sonoma-crop-report-wine-grapes-yearly-summary-2000-2024.csv`: one row per year, total tons, total value, price per ton, bearing/non-bearing/total acres, and a notes column flagging any judgment call or source inconsistency for that year.
 - `sonoma-crop-report-wine-grapes-variety-detail-2000-2024.csv`: one row per year per variety (long format), with color (red/white), bearing/non-bearing/total acres, tons, price per ton, and value.
 
+Two standalone HTML chart files, built from the CSVs above, open directly in a browser:
+- `sonoma-wine-grapes-red-vs-white-trends-2000-2024.html`: total tons, price per ton (nominal and inflation-adjusted), and total acreage, red vs white.
+- `sonoma-wine-grapes-by-variety-trends-2000-2024.html`: the same three metrics for the top 5 varieties by tons (Chardonnay, Pinot Noir, Cabernet Sauvignon, Merlot, Zinfandel).
+
+Price-per-ton charts show both a nominal line and an inflation-adjusted line (CPI-U annual averages, 2000 = reference year; source: U.S. Bureau of Labor Statistics, https://www.bls.gov/cpi/tables/supplemental-files/historical-cpi-u-202412.pdf). Adjusted for inflation, red grape prices per ton fell about 15% from 2000 to 2024 and white fell about 26%; by variety, only Pinot Noir held its real value (roughly flat), while Chardonnay, Cabernet Sauvignon, Merlot, and Zinfandel all lost real value (down about 27%, 34%, 40%, and 17% respectively).
+
 ## Scope and why it starts at 2000
 
 The county has published a Crop Report every year since 1928, but only 2000-2024 was extracted. Reports from 2000 on use a consistent "Winegrape Production" table (separate Reds and Whites, one row per variety, with bearing acres, non-bearing acres, total acres, tons, price per ton, and value). Before that:

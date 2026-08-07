@@ -65,6 +65,25 @@ Primary-source county data, not a news article, so registered as one row citing 
 
 | Source | Title, publisher | URL | Derived files |
 |---|---|---|---|
+| Sonoma County Crop Reports | Annual Crop Report, Dept of Agriculture, Weights & Measures, Sonoma County (1928-present; wine-grape data extracted for 2000-2024) | https://sonomacounty.gov/natural-resources/agriculture-weights-and-measures/crop-reports | `sonoma-crop-report-wine-grapes-2000-2024.md` (methodology and data-quality notes), `sonoma-crop-report-wine-grapes-yearly-summary-2000-2024.csv`, `sonoma-crop-report-wine-grapes-variety-detail-2000-2024.csv`, `sonoma-wine-grapes-red-vs-white-trends-2000-2024.html`, `sonoma-wine-grapes-by-variety-trends-2000-2024.html` |
+| BLS Historical CPI-U | Historical Consumer Price Index for All Urban Consumers (CPI-U), U.S. city average, all items (Bureau of Labor Statistics; annual averages, 1982-84=100). Used only to inflation-adjust the crop report price-per-ton figures above to 2000 dollars. | https://www.bls.gov/cpi/tables/supplemental-files/historical-cpi-u-202412.pdf | Inflation-adjusted series inside `sonoma-wine-grapes-red-vs-white-trends-2000-2024.html` and `sonoma-wine-grapes-by-variety-trends-2000-2024.html` |
+
+## Added 2026-08-07 (Jiahan)
+
+California-wide (not Sonoma-specific) primary source data, registered as one row per report series citing the publisher's listing page rather than one row per report-year PDF, consistent with how the Sonoma Crop Reports source above is registered.
+
+| Source | Title, publisher | URL | Derived files |
+|---|---|---|---|
+| California Grape Crush Report | Annual Grape Crush Report, California Department of Food and Agriculture (CDFA) in cooperation with USDA NASS Pacific Regional Office (wine-grape data extracted for 2000-2025; California statewide and Grape Crush District 3, Sonoma and Marin Counties) | https://www.nass.usda.gov/Statistics_by_State/California/Publications/Specialty_and_Other_Releases/Grapes/Crush/Reports/index.php | `california-crush-and-acreage-reports-2000-2025.md` (methodology and data-quality notes), `california-crush-report-statewide-summary-2000-2025.csv`, `california-crush-report-district3-sonoma-marin-2000-2025.csv`, `california-crush-report-trends-2000-2025.html`, `wine-grape-trends-combined-dashboard-2000-2025.html` |
+| California Grape Acreage Report | Annual Grape Acreage Report, CDFA in cooperation with USDA NASS Pacific Regional Office (statewide estimated wine-grape acreage extracted for 2000-2025) | https://www.nass.usda.gov/Statistics_by_State/California/Publications/Specialty_and_Other_Releases/Grapes/acreage/ | `california-crush-and-acreage-reports-2000-2025.md`, `california-grape-acreage-estimated-2000-2025.csv`, `california-grape-acreage-trends-2000-2025.html`, `wine-grape-trends-combined-dashboard-2000-2025.html` |
+
+## Added 2026-08-07 (Jiahan), continued
+
+While extending the crop report's BLS CPI-U inflation adjustment through 2025 for the crush-report price charts, found that BLS's own December 2025 CPI News Release states the 2025 CPI-U series has a data gap for October and November 2025 due to the 2025 federal lapse in appropriations, and no calendar-year 2025 annual-average CPI-U figure has been published as of this check. Per team style, this stays as unknown rather than estimated: all charts built this session show the inflation-adjusted (real, 2000 dollars) price line stopping at 2024, with 2025 shown nominal-only.
+
+| Source | Title, publisher | URL | Derived files |
+|---|---|---|---|
+| BLS December 2025 CPI News Release | Consumer Price Index News Release, 2025 M12 Results (Bureau of Labor Statistics, released Jan 13, 2026) | https://www.bls.gov/news.release/archives/cpi_01132026.htm | Data-quality note only (2025 CPI-U annual average unavailable); reflected in `california-crush-report-trends-2000-2025.html`, `wine-grape-trends-combined-dashboard-2000-2025.html` |
 | Sonoma County Crop Reports | Annual Crop Report, Dept of Agriculture, Weights & Measures, Sonoma County (1928-present; wine-grape data extracted for 2000-2024) | https://sonomacounty.gov/natural-resources/agriculture-weights-and-measures/crop-reports | `sonoma-crop-report-wine-grapes-2000-2024.md` (methodology and data-quality notes), `sonoma-crop-report-wine-grapes-yearly-summary-2000-2024.csv`, `sonoma-crop-report-wine-grapes-variety-detail-2000-2024.csv` |
 
 ## Added 2026-08-06 (Rodolfo, article ingestion)

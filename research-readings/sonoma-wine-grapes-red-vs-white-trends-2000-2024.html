@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sonoma County wine grapes: red vs white trends, 2000-2024</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; color: #0b0b0b; background: #ffffff; max-width: 760px; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-size: 20px; font-weight: bold; margin-bottom: 4px; }
+  .subtitle { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 24px; }
+  h2 { font-size: 15px; font-weight: bold; margin: 32px 0 4px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 4px; font-size: 12px; color: #444; }
+  .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+  .note { font-size: 11px; color: #777; margin-bottom: 8px; }
+  .chart-wrap { position: relative; width: 100%; height: 260px; margin-bottom: 8px; }
+  .source { font-size: 11px; color: #777; margin-top: 32px; border-top: 1px solid #ddd; padding-top: 12px; }
+</style>
+</head>
+<body>
+
+<h1>Sonoma County wine grapes: red vs white trends, 2000-2024</h1>
+<div class="subtitle">Sonoma County, CA — wine grapes only</div>
+
+<h2>Total tons, red vs white</h2>
+<div class="legend">
+  <span><span class="swatch" style="background:#2a78d6;"></span>Red</span>
+  <span><span class="swatch" style="background:#eb6834;"></span>White</span>
+</div>
+<div class="chart-wrap"><canvas id="tons" role="img" aria-label="Line chart of red versus white wine grape tons harvested in Sonoma County, 2000 to 2024. Red tons consistently exceed white, both peaking around 2018.">Total tons by color, 2000 to 2024.</canvas></div>
+
+<h2>Price per ton, red vs white — nominal and inflation-adjusted</h2>
+<div class="legend">
+  <span><span class="swatch" style="background:#2a78d6;"></span>Red</span>
+  <span><span class="swatch" style="background:#eb6834;"></span>White</span>
+</div>
+<div class="note">Solid = inflation-adjusted to 2000 dollars. Dashed = nominal $/ton.</div>
+<div class="chart-wrap"><canvas id="price" role="img" aria-label="Line chart of red versus white wine grape price per ton, 2000 to 2024, with an inflation-adjusted solid line in 2000 dollars and a nominal dashed line. Nominal prices rose while inflation-adjusted real prices declined for both colors.">Price per ton by color, real and nominal, 2000 to 2024.</canvas></div>
+
+<h2>Total acreage, red vs white</h2>
+<div class="legend">
+  <span><span class="swatch" style="background:#2a78d6;"></span>Red</span>
+  <span><span class="swatch" style="background:#eb6834;"></span>White</span>
+</div>
+<div class="chart-wrap"><canvas id="acres" role="img" aria-label="Line chart of total planted acreage for red versus white wine grapes in Sonoma County, 2000 to 2024. Red acreage runs roughly double white acreage across the whole period.">Total acreage by color, 2000 to 2024.</canvas></div>
+
+<div class="source">Sources: Sonoma County Dept. of Agriculture, Weights &amp; Measures, annual Crop Reports, 2000-2024 (wine grapes only, tons/price/acreage). U.S. Bureau of Labor Statistics, CPI-U annual averages, 1982-84=100 (inflation adjustment, 2000 = reference year). Data files: research-readings/sonoma-crop-report-wine-grapes-yearly-summary-2000-2024.csv and sonoma-crop-report-wine-grapes-variety-detail-2000-2024.csv.</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const years = [2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
+
+const redTons = [107029.0,107713.0,107819.0,100863.9,101063.2,139943.2,135646.8,124248.9,99428.4,120755.0,108481.0,100434.2,159191.9,153841.1,141704.3,99922.3,128352.4,123024.3,161572.4,133039.4,81613.6,119662.7,111977.7,139862.5,120432.9];
+const whiteTons = [83763.0,65872.0,75322.0,59905.0,64719.6,90966.5,80600.7,74284.6,69563.6,91957.6,83500.0,64220.3,104347.2,113024.6,109970.7,79926.9,95027.7,80213.5,111099.0,93485.8,64215.2,83124.1,76309.3,99911.6,91078.7];
+
+const redPriceNom = [2171.08,2367.11,2319.95,2211.45,2093.13,2085.29,2197.01,2273.63,2488.59,2429.29,2255.85,2275.12,2447.98,2566.66,2686.2,2835.44,3031.5,3238.27,3238.08,3288.51,2687.66,3065.1,3268.05,3397.68,3346.72];
+const whitePriceNom = [1858.41,1827.93,1689.07,1555.91,1553.96,1569.94,1679.42,1804.59,1921.34,1903.06,1809.45,1776.14,1808.78,1841.21,1908.5,2007.06,2073.51,2206.83,2260.69,2292.05,2140.27,2188.99,2336.84,2468.48,2489.16];
+
+const redBearing = [25936.0,27278.0,29833.0,34442.0,33337.9,38981.3,37950.2,37323.3,37528.7,37937.3,37804.5,38281.8,38764.1,38593.1,37652.2,37868.5,39175.6,39221.3,38969.4,37648.0,37347.0,37563.0,37560.0,37946.0,37738.0];
+const whiteBearing = [16285.0,16312.0,16754.0,17732.0,16672.6,18069.4,17557.0,17539.5,17902.7,18368.9,18717.8,18964.7,19584.8,19544.5,19063.0,19283.4,19965.2,19661.3,19605.3,19012.0,18606.0,18639.0,18683.0,18799.0,18552.0];
+const redNonbearing = [10132.0,11849.0,10394.0,5836.0,6809.2,4128.4,2518.2,3412.9,3877.0,3636.2,1606.3,951.8,442.5,2472.9,2396.7,2035.7,1061.7,1072.1,1623.8,1353.0,1449.0,1024.0,1036.0,792.0,626.0];
+const whiteNonbearing = [3524.0,3228.0,2909.0,1962.0,3245.2,2645.8,2277.0,2617.0,2663.2,2964.9,1531.1,1047.7,427.5,1053.6,1021.5,911.1,665.0,464.8,619.3,358.0,521.0,517.0,520.0,498.0,613.0];
+const redTotalAcres = redBearing.map((b,i) => b + redNonbearing[i]);
+const whiteTotalAcres = whiteBearing.map((b,i) => b + whiteNonbearing[i]);
+
+const cpi = [172.2,177.1,179.9,184.0,188.9,195.3,201.6,207.342,215.303,214.537,218.056,224.939,229.594,232.957,236.736,237.017,240.007,245.120,251.107,255.657,258.811,270.970,292.655,304.702,313.689];
+const cpiBase = cpi[0];
+const toReal = arr => arr.map((v,i) => Math.round((v * cpiBase / cpi[i]) * 100) / 100);
+const redPriceReal = toReal(redPriceNom);
+const whitePriceReal = toReal(whitePriceNom);
+
+const cove = ['#2a78d6','#eb6834'];
+const muted = '#898781';
+const grid = '#e1e0d9';
+const baseOpts = {
+  responsive: true, maintainAspectRatio: false,
+  interaction: { mode: 'index', intersect: false },
+  plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false } },
+  scales: {
+    x: { grid: { display: false }, ticks: { color: muted, font: { size: 11 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 9 } },
+    y: { grid: { color: grid, drawTicks: false }, border: { display: false }, ticks: { color: muted, font: { size: 11 } } }
+  }
+};
+
+new Chart(document.getElementById('tons'), {
+  type: 'line',
+  data: { labels: years, datasets: [
+    { label: 'Red', data: redTons, borderColor: cove[0], borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'White', data: whiteTons, borderColor: cove[1], borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: { ...baseOpts, scales: { ...baseOpts.scales, y: { ...baseOpts.scales.y, ticks: { ...baseOpts.scales.y.ticks, callback: v => (v/1000)+'k' } } } }
+});
+
+new Chart(document.getElementById('price'), {
+  type: 'line',
+  data: { labels: years, datasets: [
+    { label: 'Red (real, 2000$)', data: redPriceReal, borderColor: cove[0], borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Red (nominal)', data: redPriceNom, borderColor: cove[0], borderDash: [6,4], borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'White (real, 2000$)', data: whitePriceReal, borderColor: cove[1], borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'White (nominal)', data: whitePriceNom, borderColor: cove[1], borderDash: [6,4], borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: { ...baseOpts, scales: { ...baseOpts.scales, y: { ...baseOpts.scales.y, ticks: { ...baseOpts.scales.y.ticks, callback: v => '$'+(v/1000).toFixed(1)+'k' } } } }
+});
+
+new Chart(document.getElementById('acres'), {
+  type: 'line',
+  data: { labels: years, datasets: [
+    { label: 'Red', data: redTotalAcres, borderColor: cove[0], borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'White', data: whiteTotalAcres, borderColor: cove[1], borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: { ...baseOpts, scales: { ...baseOpts.scales, y: { ...baseOpts.scales.y, ticks: { ...baseOpts.scales.y.ticks, callback: v => (v/1000).toFixed(1)+'k' } } } }
+});
+</script>
+</body>
+</html>
