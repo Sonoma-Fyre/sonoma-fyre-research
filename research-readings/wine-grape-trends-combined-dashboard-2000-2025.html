@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wine grape trends: acreage, crop, and crush</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; color: #0b0b0b; background: #ffffff; max-width: 780px; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-size: 20px; font-weight: bold; margin-bottom: 4px; }
+  .intro { font-size: 12px; color: #444; line-height: 1.5; margin-bottom: 24px; }
+  h2.section { font-size: 17px; font-weight: bold; margin: 40px 0 4px; border-bottom: 2px solid #ddd; padding-bottom: 6px; }
+  .section-source { font-size: 11px; color: #777; margin: 6px 0 16px; }
+  h3 { font-size: 14px; font-weight: bold; margin: 28px 0 2px; }
+  .units { font-size: 12px; color: #444; margin-bottom: 4px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 4px; font-size: 12px; color: #444; }
+  .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+  .note { font-size: 11px; color: #777; margin-bottom: 8px; }
+  .chart-wrap { position: relative; width: 100%; height: 270px; margin-bottom: 8px; }
+  .source { font-size: 11px; color: #777; margin-top: 32px; border-top: 1px solid #ddd; padding-top: 12px; }
+</style>
+</head>
+<body>
+
+<h1>Wine grape trends: acreage, crop, and crush</h1>
+<div class="intro">Three different geographies, do not conflate: the Acreage Report is California statewide only, 2000-2025 (no reliable Sonoma-only figure could be extracted). The Sonoma County Crop Report is Sonoma County only, 2000-2024. The Crush Report shows both California statewide and Grape Crush District 3, the official Sonoma and Marin Counties pricing district, the closest available Sonoma proxy, 2000-2025. Presented in that order: acreage, crop, crush.</div>
+
+<h2 class="section">California Grape Acreage Report, 2000-2025 (statewide)</h2>
+<div class="section-source">Source: CDFA/NASS California Grape Acreage Report. Estimated wine grape acreage, rounded to nearest 1,000 acres. Statewide only.</div>
+
+<h3>California statewide estimated wine grape acreage</h3>
+<div class="units">Units: acres, bearing / non-bearing / total, 2000-2025</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#2a78d6;"></span>Bearing</span>
+  <span><span class="swatch" style="background:#eb6834;"></span>Non-bearing</span>
+  <span><span class="swatch" style="background:#4a3aa7;"></span>Total</span>
+</div>
+<div class="chart-wrap"><canvas id="acre1" role="img" aria-label="Line chart of California statewide estimated wine grape acreage, bearing, non-bearing, and total, 2000 to 2025, in acres">California wine acreage grew from 568,000 total acres in 2000 to a peak of 637,000 in 2018, then declined to 540,000 by 2025.</canvas></div>
+
+<h2 class="section">Sonoma County Crop Report, 2000-2024</h2>
+<div class="section-source">Source: Sonoma County Dept. of Agriculture, Weights &amp; Measures, annual Crop Reports. Wine grapes only.</div>
+
+<h3>Sonoma County wine grape tons harvested, red vs. white</h3>
+<div class="units">Units: tons per year, 2000-2024</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#e34948;"></span>Red</span>
+  <span><span class="swatch" style="background:#eda100;"></span>White</span>
+</div>
+<div class="chart-wrap"><canvas id="crop1" role="img" aria-label="Line chart of Sonoma County wine grape tons harvested, red versus white, 2000 to 2024, in tons">Red tons consistently exceed white tons, both peaking around 2018, in Sonoma County, 2000-2024.</canvas></div>
+
+<h3>Sonoma County wine grape price per ton, red vs. white</h3>
+<div class="units">Units: USD per ton, real (2000 dollars) and nominal, 2000-2024</div>
+<div class="note">Solid = inflation-adjusted to 2000 dollars. Dashed = nominal $/ton.</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#e34948;"></span>Red</span>
+  <span><span class="swatch" style="background:#eda100;"></span>White</span>
+</div>
+<div class="chart-wrap"><canvas id="crop2" role="img" aria-label="Line chart of Sonoma County wine grape price per ton, red versus white, real and nominal, 2000 to 2024, in USD per ton">Nominal prices rose while inflation-adjusted real prices declined for both colors, in Sonoma County, 2000-2024.</canvas></div>
+
+<h3>Sonoma County wine grape acreage, red vs. white</h3>
+<div class="units">Units: total planted acres, 2000-2024</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#e34948;"></span>Red</span>
+  <span><span class="swatch" style="background:#eda100;"></span>White</span>
+</div>
+<div class="chart-wrap"><canvas id="crop3" role="img" aria-label="Line chart of Sonoma County total planted acreage, red versus white wine grapes, 2000 to 2024, in acres">Red acreage runs roughly double white acreage across the whole period, in Sonoma County, 2000-2024.</canvas></div>
+
+<h3>Sonoma County wine grape tons by variety (top 5 by tons)</h3>
+<div class="units">Units: tons per year, 2000-2024</div>
+<div class="legend" id="cropVarietyTonsLegend"></div>
+<div class="chart-wrap" style="height:290px;"><canvas id="crop4" role="img" aria-label="Multi-line chart of tons harvested for Chardonnay, Pinot Noir, Cabernet Sauvignon, Merlot and Zinfandel in Sonoma County, 2000 to 2024, in tons">Chardonnay leads throughout, Pinot Noir rises steadily, Merlot falls sharply after 2007, in Sonoma County, 2000-2024.</canvas></div>
+
+<h3>Sonoma County wine grape price per ton by variety</h3>
+<div class="units">Units: USD per ton, real (2000 dollars) and nominal, 2000-2024</div>
+<div class="note">Solid = inflation-adjusted to 2000 dollars. Dashed = nominal $/ton.</div>
+<div class="legend" id="cropVarietyPriceLegend"></div>
+<div class="chart-wrap" style="height:290px;"><canvas id="crop5" role="img" aria-label="Multi-line chart of price per ton for Chardonnay, Pinot Noir, Cabernet Sauvignon, Merlot and Zinfandel in Sonoma County, 2000 to 2024, real and nominal, in USD per ton">Pinot Noir is the only variety whose real price per ton held roughly flat, the other four declined in real terms, in Sonoma County, 2000-2024.</canvas></div>
+
+<h3>Sonoma County wine grape acreage by variety</h3>
+<div class="units">Units: total planted acres, 2000-2024</div>
+<div class="legend" id="cropVarietyAcresLegend"></div>
+<div class="chart-wrap" style="height:290px;"><canvas id="crop6" role="img" aria-label="Multi-line chart of total planted acreage for Chardonnay, Pinot Noir, Cabernet Sauvignon, Merlot and Zinfandel in Sonoma County, 2000 to 2024, in acres">Chardonnay acreage stays roughly flat, Pinot Noir acreage grows steadily, Merlot acreage nearly halves, in Sonoma County, 2000-2024.</canvas></div>
+
+<h2 class="section">California Grape Crush Report, 2000-2025 (statewide and District 3)</h2>
+<div class="section-source">Source: CDFA/NASS California Grape Crush Report. Grape Crush District 3 = Sonoma and Marin Counties combined (the official pricing district, not Sonoma alone).</div>
+
+<h3>California statewide crush tons, red vs. white</h3>
+<div class="units">Units: tons crushed per year, 2000-2025</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#eda100;"></span>White</span>
+  <span><span class="swatch" style="background:#e34948;"></span>Red</span>
+</div>
+<div class="chart-wrap"><canvas id="crush1" role="img" aria-label="Line chart of California statewide grape crush tons, red versus white, 2000 to 2025, in tons">California statewide crush tons rose from about 1.5M white and 1.8M red in 2000 to peaks near 1.8M white and 2.4M red in 2018, then declined to about 1.3M each by 2025.</canvas></div>
+
+<h3>California statewide crush price per ton, red vs. white</h3>
+<div class="units">Units: USD per ton, real (2000 dollars) and nominal, 2000-2025</div>
+<div class="note">Solid = inflation-adjusted to 2000 dollars. Dashed = nominal $/ton. 2025 CPI-U annual average is not yet published (data gap from the federal appropriations lapse), so the real line stops at 2024.</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#eda100;"></span>White</span>
+  <span><span class="swatch" style="background:#e34948;"></span>Red</span>
+</div>
+<div class="chart-wrap"><canvas id="crush2" role="img" aria-label="Line chart of California statewide grape crush price per ton, red versus white, real and nominal, 2000 to 2025, in USD per ton">Real white price fell from 500 to about 392 by 2024 and real red price rose modestly, showing most of the nominal gain was inflation, especially for white.</canvas></div>
+
+<h3>District 3 (Sonoma/Marin) crush tons, red vs. white</h3>
+<div class="units">Units: tons crushed per year, 2000-2025</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#eda100;"></span>White</span>
+  <span><span class="swatch" style="background:#e34948;"></span>Red</span>
+</div>
+<div class="chart-wrap"><canvas id="crush3" role="img" aria-label="Line chart of District 3, Sonoma and Marin counties, grape crush tons, red versus white, 2000 to 2025, in tons">District 3 crush tons fluctuated between roughly 60,000 and 115,000 tons white and 82,000 and 164,000 tons red, with no clear long-run trend.</canvas></div>
+
+<h3>District 3 (Sonoma/Marin) crush price per ton, red vs. white</h3>
+<div class="units">Units: USD per ton, real (2000 dollars) and nominal, 2000-2025</div>
+<div class="note">Solid = inflation-adjusted to 2000 dollars. Dashed = nominal $/ton. Gaps mark years where District 3 price could not be extracted from the source report, or where the 2000-dollar adjustment is unavailable (2025). Not interpolated.</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#eda100;"></span>White</span>
+  <span><span class="swatch" style="background:#e34948;"></span>Red</span>
+</div>
+<div class="chart-wrap"><canvas id="crush4" role="img" aria-label="Line chart of District 3, Sonoma and Marin counties, grape crush price per ton, red versus white, real and nominal, 2000 to 2025, in USD per ton, with gaps for unavailable years">Real white price stayed roughly flat around 1400-1550, real red price drifted from about 1900 toward 2200 then back down. Several years are missing on both lines.</canvas></div>
+
+<div class="source">Sources: Sonoma County Dept. of Agriculture, Weights &amp; Measures, annual Crop Reports (sonomacounty.gov). CDFA/NASS California Grape Crush Report and California Grape Acreage Report (nass.usda.gov). U.S. Bureau of Labor Statistics, CPI-U annual averages, 1982-84=100, inflation adjustment to 2000 dollars. Data files: research-readings/sonoma-crop-report-wine-grapes-*.csv, research-readings/california-crush-report-*.csv, research-readings/california-grape-acreage-estimated-2000-2025.csv.</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const muted = '#898781';
+const grid = '#e1e0d9';
+const baseOpts = (yfmt) => ({
+  responsive: true, maintainAspectRatio: false,
+  interaction: { mode: 'index', intersect: false },
+  plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => ctx.dataset.label + ': ' + yfmt(ctx.parsed.y) } } },
+  scales: {
+    x: { grid: { display: false }, ticks: { color: muted, font: { size: 11 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 9 } },
+    y: { grid: { color: grid, drawTicks: false }, border: { display: false }, ticks: { color: muted, font: { size: 11 }, callback: yfmt } }
+  }
+});
+const tonsFmt = v => (v/1000).toFixed(0)+'k';
+const priceFmt = v => '$'+Math.round(v).toLocaleString();
+const acreFmt = v => (v/1000).toFixed(1)+'k';
+
+/* ===== California Grape Acreage Report, 2000-2025 ===== */
+const wideYears = [];
+for (let y = 2000; y <= 2025; y++) wideYears.push(y);
+
+const acreBearing = [458000,480000,486000,479000,473000,477000,480000,480000,482000,489000,497000,506000,550000,565000,565000,560000,560000,560000,590000,590000,580000,575000,575000,570000,550000,510000];
+const acreNonbearing = [110000,90000,70000,50000,40000,45000,47000,43000,44000,42000,38000,37000,38000,45000,50000,48000,42000,39000,47000,45000,40000,40000,40000,40000,40000,30000];
+const acreTotal = [568000,570000,556000,529000,513000,522000,527000,523000,526000,531000,535000,543000,588000,610000,615000,608000,602000,599000,637000,635000,620000,615000,615000,610000,590000,540000];
+
+new Chart(document.getElementById('acre1'), {
+  type: 'line',
+  data: { labels: wideYears, datasets: [
+    { label: 'Bearing', data: acreBearing, borderColor: '#2a78d6', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Non-bearing', data: acreNonbearing, borderColor: '#eb6834', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Total', data: acreTotal, borderColor: '#4a3aa7', borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: baseOpts(acreFmt)
+});
+
+/* ===== Sonoma County Crop Report, 2000-2024 ===== */
+const cropYears = [2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
+
+const redTons = [107029.0,107713.0,107819.0,100863.9,101063.2,139943.2,135646.8,124248.9,99428.4,120755.0,108481.0,100434.2,159191.9,153841.1,141704.3,99922.3,128352.4,123024.3,161572.4,133039.4,81613.6,119662.7,111977.7,139862.5,120432.9];
+const whiteTons = [83763.0,65872.0,75322.0,59905.0,64719.6,90966.5,80600.7,74284.6,69563.6,91957.6,83500.0,64220.3,104347.2,113024.6,109970.7,79926.9,95027.7,80213.5,111099.0,93485.8,64215.2,83124.1,76309.3,99911.6,91078.7];
+
+const redPriceNom = [2171.08,2367.11,2319.95,2211.45,2093.13,2085.29,2197.01,2273.63,2488.59,2429.29,2255.85,2275.12,2447.98,2566.66,2686.2,2835.44,3031.5,3238.27,3238.08,3288.51,2687.66,3065.1,3268.05,3397.68,3346.72];
+const whitePriceNom = [1858.41,1827.93,1689.07,1555.91,1553.96,1569.94,1679.42,1804.59,1921.34,1903.06,1809.45,1776.14,1808.78,1841.21,1908.5,2007.06,2073.51,2206.83,2260.69,2292.05,2140.27,2188.99,2336.84,2468.48,2489.16];
+
+const redBearing = [25936.0,27278.0,29833.0,34442.0,33337.9,38981.3,37950.2,37323.3,37528.7,37937.3,37804.5,38281.8,38764.1,38593.1,37652.2,37868.5,39175.6,39221.3,38969.4,37648.0,37347.0,37563.0,37560.0,37946.0,37738.0];
+const whiteBearing = [16285.0,16312.0,16754.0,17732.0,16672.6,18069.4,17557.0,17539.5,17902.7,18368.9,18717.8,18964.7,19584.8,19544.5,19063.0,19283.4,19965.2,19661.3,19605.3,19012.0,18606.0,18639.0,18683.0,18799.0,18552.0];
+const redNonbearing = [10132.0,11849.0,10394.0,5836.0,6809.2,4128.4,2518.2,3412.9,3877.0,3636.2,1606.3,951.8,442.5,2472.9,2396.7,2035.7,1061.7,1072.1,1623.8,1353.0,1449.0,1024.0,1036.0,792.0,626.0];
+const whiteNonbearing = [3524.0,3228.0,2909.0,1962.0,3245.2,2645.8,2277.0,2617.0,2663.2,2964.9,1531.1,1047.7,427.5,1053.6,1021.5,911.1,665.0,464.8,619.3,358.0,521.0,517.0,520.0,498.0,613.0];
+const redTotalAcres = redBearing.map((b,i) => b + redNonbearing[i]);
+const whiteTotalAcres = whiteBearing.map((b,i) => b + whiteNonbearing[i]);
+
+const cropCpi = [172.2,177.1,179.9,184.0,188.9,195.3,201.6,207.342,215.303,214.537,218.056,224.939,229.594,232.957,236.736,237.017,240.007,245.120,251.107,255.657,258.811,270.970,292.655,304.702,313.689];
+const cropCpiBase = cropCpi[0];
+const toRealCrop = arr => arr.map((v,i) => Math.round((v * cropCpiBase / cropCpi[i]) * 100) / 100);
+const redPriceReal = toRealCrop(redPriceNom);
+const whitePriceReal = toRealCrop(whitePriceNom);
+
+new Chart(document.getElementById('crop1'), {
+  type: 'line',
+  data: { labels: cropYears, datasets: [
+    { label: 'Red', data: redTons, borderColor: '#e34948', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'White', data: whiteTons, borderColor: '#eda100', borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: baseOpts(tonsFmt)
+});
+
+new Chart(document.getElementById('crop2'), {
+  type: 'line',
+  data: { labels: cropYears, datasets: [
+    { label: 'Red, real (2000$)', data: redPriceReal, borderColor: '#e34948', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Red, nominal', data: redPriceNom, borderColor: '#e34948', borderDash: [6,4], borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'White, real (2000$)', data: whitePriceReal, borderColor: '#eda100', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'White, nominal', data: whitePriceNom, borderColor: '#eda100', borderDash: [6,4], borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: baseOpts(priceFmt)
+});
+
+new Chart(document.getElementById('crop3'), {
+  type: 'line',
+  data: { labels: cropYears, datasets: [
+    { label: 'Red', data: redTotalAcres, borderColor: '#e34948', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'White', data: whiteTotalAcres, borderColor: '#eda100', borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: baseOpts(acreFmt)
+});
+
+const varietyTons = {
+  Chardonnay: [69478,52853,60844,46825,53180.3,73824.6,61986.2,58433.3,53533.1,73100.6,66157.4,52374.4,81581.6,87883.5,87380.5,64208.9,74954.2,61052.3,88311.6,72135.9,47877.7,66833.0,59318.0,79239.4,72594.2],
+  'Pinot Noir': [17520,20861,19571,18759.10,22672.7,26944.3,38453.8,29486.9,29441.5,31961.2,29791.3,28350.2,52793.2,54826.8,47677.2,30667.2,42566.3,43439.1,58005.2,47178.3,29263.7,48496.5,42550.2,55159.4,49562.1],
+  'Cabernet Sauvignon': [32772,32194,32258,36471.40,30561.3,45577.2,38410.3,41550.6,31870.8,41140.6,37933.3,33126.8,47194.0,44255.8,45772.0,32947.3,41575.7,43157.9,56948.2,45948.3,31137.9,41114.6,41694.1,48847.0,39354.1],
+  Merlot: [31480,27879,29037,20917.50,22855.2,31656.3,26015.2,21337.4,13298.5,16506.5,17440.9,14670.5,21627.6,18784.5,16989.6,12031.4,13761.0,11611.1,15492.0,12312.3,5652.8,7828.5,6409.7,9393.9,8029.6],
+  Zinfandel: [13223,14287,13385,11561.30,11783.2,17866.5,16683.7,14591.5,12190.6,15637.4,10864.4,13101.0,21204.2,20172.3,15597.2,13070.9,15287.7,12874.5,15730.6,14817.7,8397.0,11660.0,10221.1,12973.2,11116.8]
+};
+const varietyPriceNom = {
+  Chardonnay: [1961.84,1908.77,1730.46,1574.65,1576.16,1592.54,1725.98,1869.52,2016.52,1978.18,1845.52,1843.94,1893.66,1930.28,1990.38,2084.79,2162.97,2335.36,2367.00,2414.28,2311.46,2284.72,2439.57,2559.87,2590.41],
+  'Pinot Noir': [2094.39,2219.03,2131.66,2011.54,1974.75,2128.99,2507.31,2831.16,3170.71,3043.08,2825.12,2902.47,3014.62,3079.99,3251.49,3525.42,3680.50,3912.46,3802.05,3949.20,3146.85,3512.27,3708.74,3880.92,3890.39],
+  'Cabernet Sauvignon': [2417.96,2698.66,2694.93,2537.94,2397.71,2305.27,2265.69,2237.73,2321.51,2280.67,2083.96,2111.24,2313.56,2462.99,2614.37,2724.17,2964.60,3071.98,3113.75,3055.93,2460.15,2728.69,2970.68,3061.44,2920.71],
+  Merlot: [2019.29,2136.86,1965.47,1768.89,1663.90,1591.72,1529.52,1452.25,1555.48,1507.00,1297.08,1380.85,1496.57,1607.03,1651.47,1717.25,1818.10,1922.95,1961.96,2000.15,1589.61,1961.32,2117.16,2206.07,2202.59],
+  Zinfandel: [2143.10,2456.58,2494.52,2334.96,2301.63,2306.54,2309.13,2376.30,2485.66,2462.39,2260.27,2357.61,2419.54,2444.51,2543.78,2711.07,2840.06,3006.42,3102.26,3143.05,2624.37,3113.73,3345.02,3423.89,3234.32]
+};
+const varietyAcres = {
+  Chardonnay: [16096.0,15758.0,15718.0,15741.0,15651.7,16076.1,15768.2,16028.1,16395.9,17074.7,16323.0,16319.3,16303.1,16864.5,16384.5,16376.4,16583.6,16260.4,16451.1,15753.0,15512.0,15500.0,15460.0,15516.0,15283.0],
+  'Pinot Noir': [8604.0,10365.0,10255.0,10113.0,10136.5,11116.6,11030.9,11810.3,12535.7,12734.7,12131.5,12239.7,12222.4,13487.4,13582.3,13600.7,13728.3,13838.1,14263.6,13094.0,13013.0,12873.0,12880.0,13112.0,13097.0],
+  'Cabernet Sauvignon': [11016.0,11955.0,12143.0,12237.0,12126.2,12667.0,12074.6,12093.7,12254.4,12389.0,12017.3,12018.3,12023.9,12901.1,12767.9,12823.4,13016.7,13061.3,13147.4,12621.0,12720.0,12722.0,12656.0,12720.0,12700.0],
+  Merlot: [7622.0,7376.0,7410.0,7429.0,7391.4,7453.4,6894.9,6418.4,6009.0,5846.0,5303.6,5149.9,5138.2,4647.2,4336.2,4151.6,4140.3,4001.4,3951.0,4393.0,4192.0,4157.0,4151.0,4055.0,3777.0],
+  Zinfandel: [5143.0,5030.0,5128.0,5111.0,5161.9,5831.4,5669.4,5456.2,5621.6,5401.2,5167.5,5297.9,5297.6,5298.8,5127.9,5073.4,5090.5,4993.9,4971.0,4808.0,4759.0,4729.0,4728.0,4650.0,4623.0]
+};
+const varietyCove = ['#2a78d6','#eb6834','#1baf7a','#eda100','#e87ba4'];
+
+function buildLegend(elId, keys) {
+  const el = document.getElementById(elId);
+  keys.forEach((k,i) => {
+    el.innerHTML += '<span><span class="swatch" style="background:'+varietyCove[i]+';"></span>'+k+'</span>';
+  });
+}
+
+buildLegend('cropVarietyTonsLegend', Object.keys(varietyTons));
+new Chart(document.getElementById('crop4'), {
+  type: 'line',
+  data: { labels: cropYears, datasets: Object.keys(varietyTons).map((k,i) => ({ label: k, data: varietyTons[k], borderColor: varietyCove[i], borderWidth: 2, pointRadius: 0, tension: 0.15 })) },
+  options: baseOpts(tonsFmt)
+});
+
+buildLegend('cropVarietyPriceLegend', Object.keys(varietyPriceNom));
+const priceDatasets = [];
+Object.keys(varietyPriceNom).forEach((k,i) => {
+  const nom = varietyPriceNom[k];
+  const real = toRealCrop(nom);
+  priceDatasets.push({ label: k+' (real, 2000$)', data: real, borderColor: varietyCove[i], borderWidth: 2, pointRadius: 0, tension: 0.15 });
+  priceDatasets.push({ label: k+' (nominal)', data: nom, borderColor: varietyCove[i], borderDash: [6,4], borderWidth: 2, pointRadius: 0, tension: 0.15 });
+});
+new Chart(document.getElementById('crop5'), {
+  type: 'line',
+  data: { labels: cropYears, datasets: priceDatasets },
+  options: baseOpts(priceFmt)
+});
+
+buildLegend('cropVarietyAcresLegend', Object.keys(varietyAcres));
+new Chart(document.getElementById('crop6'), {
+  type: 'line',
+  data: { labels: cropYears, datasets: Object.keys(varietyAcres).map((k,i) => ({ label: k, data: varietyAcres[k], borderColor: varietyCove[i], borderWidth: 2, pointRadius: 0, tension: 0.15 })) },
+  options: baseOpts(acreFmt)
+});
+
+/* ===== California Grape Crush Report, 2000-2025 ===== */
+const swTonsWhite = [1502696.4,1299736.8,1287865.3,1230255.2,1136236.4,1520571.9,1262542.2,1372108.8,1346043.8,1624909.9,1537835.5,1426905.4,1725689.1,1828512.6,1754502.6,1663789.9,1752553.6,1765424.0,1833754.7,1762084.8,1590634.4,1600507.7,1474090.3,1712583.3,1401048.3,1324464.7];
+const swTonsRed = [1815810.2,1708402.5,1816715.6,1633540.9,1638658.1,2234594.5,1873891.9,1875367.7,1715376.7,2078121.1,2050742.6,1920035.9,2292200.5,2416378.2,2138293.7,2040780.6,2278593.1,2248259.5,2447929.5,2157061.4,1820251.9,2031241.5,1902044.1,1972249.0,1464532.2,1301690.0];
+
+const swPriceWhiteNom = [499.99,490.88,431.43,428.88,487.47,506.37,503.56,481.59,539.93,535.55,501.25,542.41,625.30,622.86,595.61,540.24,598.07,587.73,634.84,589.54,558.30,674.98,683.20,733.54,713.88,706.10];
+const swPriceRedNom = [627.97,678.50,613.33,608.60,626.69,633.48,636.55,626.48,648.05,670.54,627.57,706.77,883.62,851.12,892.06,789.46,918.34,965.54,1019.03,1019.56,795.39,1071.69,1169.90,1345.68,1339.82,1280.66];
+const swPriceWhiteReal = [499.99,477.3,412.96,401.38,444.37,446.48,430.12,399.97,431.84,429.86,395.84,415.24,468.99,460.41,433.24,392.5,429.1,412.89,435.35,397.09,371.47,428.95,402.0,414.55,391.89,null];
+const swPriceRedReal = [627.97,659.73,587.08,569.57,571.29,558.55,543.72,520.3,518.31,538.21,495.6,541.06,662.73,629.14,648.88,573.57,658.89,678.3,698.81,686.73,529.21,681.05,688.38,760.5,735.5,null];
+
+const d3TonsWhite = [83761.7,65871.8,75321.5,59904.2,64719.6,90966.5,80600.7,74283.9,69563.6,91957.6,83500.0,64800.3,105351.7,114173.8,111613.9,80535.1,95852.3,81309.7,112401.7,94740.1,65174.9,84318.2,77208.7,99116.3,91990.7,89120.8];
+const d3TonsRed = [107026.9,107711.5,107817.6,100863.9,101063.2,139943.2,135646.8,124248.9,99428.4,120717.0,108481.0,101818.5,161709.9,156435.3,144021.5,101534.3,130589.3,124787.5,163575.2,135051.7,82910.2,121693.0,113656.1,141785.7,122519.0,97725.0];
+
+const d3PriceWhiteNom = [null,null,null,null,1553.96,1563.59,1679.42,1804.61,1921.34,null,1771.84,1784.38,1811.93,1845.31,1902.86,2010.35,2081.90,2213.41,2264.70,2302.24,2149.05,2191.56,2343.03,null,null,null];
+const d3PriceRedNom = [null,null,null,null,2093.13,2099.84,2197.01,2273.63,2488.59,null,2211.07,2301.97,2453.74,2558.50,2685.05,2819.84,3008.75,3219.57,3227.84,3254.92,null,null,3270.74,null,null,null];
+const d3PriceWhiteReal = [null,null,null,null,1416.58,1378.65,1434.5,1498.75,1536.69,null,1399.23,1366.02,1358.98,1364.04,1384.13,1460.58,1493.72,1554.95,1553.05,1550.69,1429.87,1392.72,1378.65,null,null,null];
+const d3PriceRedReal = [null,null,null,null,1908.08,1851.47,1876.61,1888.28,1990.38,null,1746.09,1762.25,1840.35,1891.22,1953.09,2048.7,2158.72,2261.79,2213.53,2192.38,null,null,1924.52,null,null,null];
+
+new Chart(document.getElementById('crush1'), {
+  type: 'line',
+  data: { labels: wideYears, datasets: [
+    { label: 'White', data: swTonsWhite, borderColor: '#eda100', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Red', data: swTonsRed, borderColor: '#e34948', borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: baseOpts(tonsFmt)
+});
+
+new Chart(document.getElementById('crush2'), {
+  type: 'line',
+  data: { labels: wideYears, datasets: [
+    { label: 'White, real (2000$)', data: swPriceWhiteReal, borderColor: '#eda100', borderWidth: 2, pointRadius: 0, tension: 0.15, spanGaps: false },
+    { label: 'White, nominal', data: swPriceWhiteNom, borderColor: '#eda100', borderDash: [6,4], borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Red, real (2000$)', data: swPriceRedReal, borderColor: '#e34948', borderWidth: 2, pointRadius: 0, tension: 0.15, spanGaps: false },
+    { label: 'Red, nominal', data: swPriceRedNom, borderColor: '#e34948', borderDash: [6,4], borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: baseOpts(priceFmt)
+});
+
+new Chart(document.getElementById('crush3'), {
+  type: 'line',
+  data: { labels: wideYears, datasets: [
+    { label: 'White', data: d3TonsWhite, borderColor: '#eda100', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Red', data: d3TonsRed, borderColor: '#e34948', borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: baseOpts(tonsFmt)
+});
+
+new Chart(document.getElementById('crush4'), {
+  type: 'line',
+  data: { labels: wideYears, datasets: [
+    { label: 'White, real (2000$)', data: d3PriceWhiteReal, borderColor: '#eda100', borderWidth: 2, pointRadius: 2, tension: 0.15, spanGaps: false },
+    { label: 'White, nominal', data: d3PriceWhiteNom, borderColor: '#eda100', borderDash: [6,4], borderWidth: 2, pointRadius: 2, tension: 0.15, spanGaps: false },
+    { label: 'Red, real (2000$)', data: d3PriceRedReal, borderColor: '#e34948', borderWidth: 2, pointRadius: 2, tension: 0.15, spanGaps: false },
+    { label: 'Red, nominal', data: d3PriceRedNom, borderColor: '#e34948', borderDash: [6,4], borderWidth: 2, pointRadius: 2, tension: 0.15, spanGaps: false }
+  ] },
+  options: baseOpts(priceFmt)
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>California statewide wine grape acreage trend, 2000-2025</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; color: #0b0b0b; background: #ffffff; max-width: 760px; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-size: 20px; font-weight: bold; margin-bottom: 4px; }
+  .subtitle { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 24px; }
+  h2 { font-size: 15px; font-weight: bold; margin: 32px 0 4px; }
+  .units { font-size: 12px; color: #444; margin-bottom: 4px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 4px; font-size: 12px; color: #444; }
+  .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+  .note { font-size: 11px; color: #777; margin-bottom: 8px; }
+  .chart-wrap { position: relative; width: 100%; height: 280px; margin-bottom: 8px; }
+  .source { font-size: 11px; color: #777; margin-top: 32px; border-top: 1px solid #ddd; padding-top: 12px; }
+</style>
+</head>
+<body>
+
+<h1>California statewide wine grape acreage trend, 2000-2025</h1>
+<div class="subtitle">California statewide, not Sonoma-specific — CDFA/NASS Grape Acreage Report</div>
+
+<h2>Estimated wine grape acreage, bearing vs. non-bearing vs. total</h2>
+<div class="units">Units: acres, rounded to nearest 1,000 (CDFA/NASS "Estimated Grape Acreage" figure)</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#2a78d6;"></span>Bearing</span>
+  <span><span class="swatch" style="background:#eb6834;"></span>Non-bearing</span>
+  <span><span class="swatch" style="background:#4a3aa7;"></span>Total</span>
+</div>
+<div class="chart-wrap"><canvas id="acres" role="img" aria-label="Line chart of California statewide estimated wine grape acreage, bearing, non-bearing, and total, 2000 to 2025, in acres">California wine acreage grew from 568,000 total acres in 2000 to a peak of 637,000 in 2018, then declined to 540,000 by 2025.</canvas></div>
+
+<div class="source">Source: California Grape Acreage Report, CDFA in cooperation with USDA NASS Pacific Regional Office, 2000-2025 (statewide estimated wine grape acreage). No reliable Sonoma-County-specific figure was reachable in the source PDFs; see california-crush-and-acreage-reports-2000-2025.md for the methodology note. Data file: research-readings/california-grape-acreage-estimated-2000-2025.csv.</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const years = [];
+for (let y = 2000; y <= 2025; y++) years.push(y);
+
+const acreBearing = [458000,480000,486000,479000,473000,477000,480000,480000,482000,489000,497000,506000,550000,565000,565000,560000,560000,560000,590000,590000,580000,575000,575000,570000,550000,510000];
+const acreNonbearing = [110000,90000,70000,50000,40000,45000,47000,43000,44000,42000,38000,37000,38000,45000,50000,48000,42000,39000,47000,45000,40000,40000,40000,40000,40000,30000];
+const acreTotal = [568000,570000,556000,529000,513000,522000,527000,523000,526000,531000,535000,543000,588000,610000,615000,608000,602000,599000,637000,635000,620000,615000,615000,610000,590000,540000];
+
+const muted = '#898781';
+const grid = '#e1e0d9';
+const baseOpts = {
+  responsive: true, maintainAspectRatio: false,
+  interaction: { mode: 'index', intersect: false },
+  plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false } },
+  scales: {
+    x: { grid: { display: false }, ticks: { color: muted, font: { size: 11 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 9 } },
+    y: { grid: { color: grid, drawTicks: false }, border: { display: false }, ticks: { color: muted, font: { size: 11 }, callback: v => (v/1000).toFixed(0)+'k' } }
+  }
+};
+
+new Chart(document.getElementById('acres'), {
+  type: 'line',
+  data: { labels: years, datasets: [
+    { label: 'Bearing', data: acreBearing, borderColor: '#2a78d6', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Non-bearing', data: acreNonbearing, borderColor: '#eb6834', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Total', data: acreTotal, borderColor: '#4a3aa7', borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: baseOpts
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>California grape crush trends, statewide and District 3, 2000-2025</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; color: #0b0b0b; background: #ffffff; max-width: 760px; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-size: 20px; font-weight: bold; margin-bottom: 4px; }
+  .subtitle { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 24px; }
+  h2 { font-size: 15px; font-weight: bold; margin: 32px 0 4px; }
+  .units { font-size: 12px; color: #444; margin-bottom: 4px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 4px; font-size: 12px; color: #444; }
+  .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+  .note { font-size: 11px; color: #777; margin-bottom: 8px; }
+  .chart-wrap { position: relative; width: 100%; height: 280px; margin-bottom: 8px; }
+  .source { font-size: 11px; color: #777; margin-top: 32px; border-top: 1px solid #ddd; padding-top: 12px; }
+</style>
+</head>
+<body>
+
+<h1>California grape crush trends, statewide and District 3, 2000-2025</h1>
+<div class="subtitle">California statewide and Grape Crush District 3 (Sonoma and Marin Counties) — CDFA/NASS Grape Crush Report</div>
+
+<h2>California statewide crush tons, red vs. white</h2>
+<div class="units">Units: tons crushed per year, 2000-2025</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#eda100;"></span>White</span>
+  <span><span class="swatch" style="background:#e34948;"></span>Red</span>
+</div>
+<div class="chart-wrap"><canvas id="swTons" role="img" aria-label="Line chart of California statewide grape crush tons, red versus white, 2000 to 2025, in tons">California statewide crush tons rose from about 1.5M white and 1.8M red in 2000 to peaks near 1.8M white and 2.4M red in 2018, then declined to about 1.3M each by 2025.</canvas></div>
+
+<h2>California statewide crush price per ton, red vs. white</h2>
+<div class="units">Units: USD per ton, real (2000 dollars) and nominal, 2000-2025</div>
+<div class="note">Solid = inflation-adjusted to 2000 dollars. Dashed = nominal $/ton. 2025 CPI-U annual average is not yet published (2025 data has a gap from the federal appropriations lapse), so the real line stops at 2024.</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#eda100;"></span>White</span>
+  <span><span class="swatch" style="background:#e34948;"></span>Red</span>
+</div>
+<div class="chart-wrap"><canvas id="swPrice" role="img" aria-label="Line chart of California statewide grape crush price per ton, red versus white, real and nominal, 2000 to 2025, in USD per ton">Real white price fell from 500 to about 392 by 2024 and real red price rose modestly, showing most of the nominal gain was inflation, especially for white.</canvas></div>
+
+<h2>District 3 (Sonoma/Marin) crush tons, red vs. white</h2>
+<div class="units">Units: tons crushed per year, 2000-2025</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#eda100;"></span>White</span>
+  <span><span class="swatch" style="background:#e34948;"></span>Red</span>
+</div>
+<div class="chart-wrap"><canvas id="d3Tons" role="img" aria-label="Line chart of District 3, Sonoma and Marin counties, grape crush tons, red versus white, 2000 to 2025, in tons">District 3 crush tons fluctuated between roughly 60,000 and 115,000 tons white and 82,000 and 164,000 tons red, with no clear long-run trend.</canvas></div>
+
+<h2>District 3 (Sonoma/Marin) crush price per ton, red vs. white</h2>
+<div class="units">Units: USD per ton, real (2000 dollars) and nominal, 2000-2025</div>
+<div class="note">Solid = inflation-adjusted to 2000 dollars. Dashed = nominal $/ton. Gaps mark years where District 3 price could not be extracted from the source report, or where the 2000-dollar adjustment is unavailable (2025). Not interpolated.</div>
+<div class="legend">
+  <span><span class="swatch" style="background:#eda100;"></span>White</span>
+  <span><span class="swatch" style="background:#e34948;"></span>Red</span>
+</div>
+<div class="chart-wrap"><canvas id="d3Price" role="img" aria-label="Line chart of District 3, Sonoma and Marin counties, grape crush price per ton, red versus white, real and nominal, 2000 to 2025, in USD per ton, with gaps for unavailable years">Real white price stayed roughly flat around 1400-1550, real red price drifted from about 1900 toward 2200 then back down. Several years are missing on both lines.</canvas></div>
+
+<div class="source">Source: California Grape Crush Report, CDFA in cooperation with USDA NASS Pacific Regional Office, 2000-2025. Grape Crush District 3 is the official Sonoma and Marin Counties pricing district, not Sonoma alone. U.S. Bureau of Labor Statistics, CPI-U annual averages, 1982-84=100, inflation adjustment to 2000 dollars (2000-2024; 2025 annual average not yet published as of this report, see note above). Data files: research-readings/california-crush-report-statewide-summary-2000-2025.csv, research-readings/california-crush-report-district3-sonoma-marin-2000-2025.csv.</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const years = [];
+for (let y = 2000; y <= 2025; y++) years.push(y);
+
+const swTonsWhite = [1502696.4,1299736.8,1287865.3,1230255.2,1136236.4,1520571.9,1262542.2,1372108.8,1346043.8,1624909.9,1537835.5,1426905.4,1725689.1,1828512.6,1754502.6,1663789.9,1752553.6,1765424.0,1833754.7,1762084.8,1590634.4,1600507.7,1474090.3,1712583.3,1401048.3,1324464.7];
+const swTonsRed = [1815810.2,1708402.5,1816715.6,1633540.9,1638658.1,2234594.5,1873891.9,1875367.7,1715376.7,2078121.1,2050742.6,1920035.9,2292200.5,2416378.2,2138293.7,2040780.6,2278593.1,2248259.5,2447929.5,2157061.4,1820251.9,2031241.5,1902044.1,1972249.0,1464532.2,1301690.0];
+
+const swPriceWhiteNom = [499.99,490.88,431.43,428.88,487.47,506.37,503.56,481.59,539.93,535.55,501.25,542.41,625.30,622.86,595.61,540.24,598.07,587.73,634.84,589.54,558.30,674.98,683.20,733.54,713.88,706.10];
+const swPriceRedNom = [627.97,678.50,613.33,608.60,626.69,633.48,636.55,626.48,648.05,670.54,627.57,706.77,883.62,851.12,892.06,789.46,918.34,965.54,1019.03,1019.56,795.39,1071.69,1169.90,1345.68,1339.82,1280.66];
+const swPriceWhiteReal = [499.99,477.3,412.96,401.38,444.37,446.48,430.12,399.97,431.84,429.86,395.84,415.24,468.99,460.41,433.24,392.5,429.1,412.89,435.35,397.09,371.47,428.95,402.0,414.55,391.89,null];
+const swPriceRedReal = [627.97,659.73,587.08,569.57,571.29,558.55,543.72,520.3,518.31,538.21,495.6,541.06,662.73,629.14,648.88,573.57,658.89,678.3,698.81,686.73,529.21,681.05,688.38,760.5,735.5,null];
+
+const d3TonsWhite = [83761.7,65871.8,75321.5,59904.2,64719.6,90966.5,80600.7,74283.9,69563.6,91957.6,83500.0,64800.3,105351.7,114173.8,111613.9,80535.1,95852.3,81309.7,112401.7,94740.1,65174.9,84318.2,77208.7,99116.3,91990.7,89120.8];
+const d3TonsRed = [107026.9,107711.5,107817.6,100863.9,101063.2,139943.2,135646.8,124248.9,99428.4,120717.0,108481.0,101818.5,161709.9,156435.3,144021.5,101534.3,130589.3,124787.5,163575.2,135051.7,82910.2,121693.0,113656.1,141785.7,122519.0,97725.0];
+
+const d3PriceWhiteNom = [null,null,null,null,1553.96,1563.59,1679.42,1804.61,1921.34,null,1771.84,1784.38,1811.93,1845.31,1902.86,2010.35,2081.90,2213.41,2264.70,2302.24,2149.05,2191.56,2343.03,null,null,null];
+const d3PriceRedNom = [null,null,null,null,2093.13,2099.84,2197.01,2273.63,2488.59,null,2211.07,2301.97,2453.74,2558.50,2685.05,2819.84,3008.75,3219.57,3227.84,3254.92,null,null,3270.74,null,null,null];
+const d3PriceWhiteReal = [null,null,null,null,1416.58,1378.65,1434.5,1498.75,1536.69,null,1399.23,1366.02,1358.98,1364.04,1384.13,1460.58,1493.72,1554.95,1553.05,1550.69,1429.87,1392.72,1378.65,null,null,null];
+const d3PriceRedReal = [null,null,null,null,1908.08,1851.47,1876.61,1888.28,1990.38,null,1746.09,1762.25,1840.35,1891.22,1953.09,2048.7,2158.72,2261.79,2213.53,2192.38,null,null,1924.52,null,null,null];
+
+const muted = '#898781';
+const grid = '#e1e0d9';
+const baseOpts = (yfmt) => ({
+  responsive: true, maintainAspectRatio: false,
+  interaction: { mode: 'index', intersect: false },
+  plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => ctx.dataset.label + ': ' + yfmt(ctx.parsed.y) } } },
+  scales: {
+    x: { grid: { display: false }, ticks: { color: muted, font: { size: 11 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 9 } },
+    y: { grid: { color: grid, drawTicks: false }, border: { display: false }, ticks: { color: muted, font: { size: 11 }, callback: yfmt } }
+  }
+});
+const tonsFmt = v => (v/1000).toFixed(0)+'k';
+const priceFmt = v => '$'+Math.round(v).toLocaleString();
+
+new Chart(document.getElementById('swTons'), {
+  type: 'line',
+  data: { labels: years, datasets: [
+    { label: 'White', data: swTonsWhite, borderColor: '#eda100', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Red', data: swTonsRed, borderColor: '#e34948', borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: baseOpts(tonsFmt)
+});
+
+new Chart(document.getElementById('swPrice'), {
+  type: 'line',
+  data: { labels: years, datasets: [
+    { label: 'White, real (2000$)', data: swPriceWhiteReal, borderColor: '#eda100', borderWidth: 2, pointRadius: 0, tension: 0.15, spanGaps: false },
+    { label: 'White, nominal', data: swPriceWhiteNom, borderColor: '#eda100', borderDash: [6,4], borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Red, real (2000$)', data: swPriceRedReal, borderColor: '#e34948', borderWidth: 2, pointRadius: 0, tension: 0.15, spanGaps: false },
+    { label: 'Red, nominal', data: swPriceRedNom, borderColor: '#e34948', borderDash: [6,4], borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: baseOpts(priceFmt)
+});
+
+new Chart(document.getElementById('d3Tons'), {
+  type: 'line',
+  data: { labels: years, datasets: [
+    { label: 'White', data: d3TonsWhite, borderColor: '#eda100', borderWidth: 2, pointRadius: 0, tension: 0.15 },
+    { label: 'Red', data: d3TonsRed, borderColor: '#e34948', borderWidth: 2, pointRadius: 0, tension: 0.15 }
+  ] },
+  options: baseOpts(tonsFmt)
+});
+
+new Chart(document.getElementById('d3Price'), {
+  type: 'line',
+  data: { labels: years, datasets: [
+    { label: 'White, real (2000$)', data: d3PriceWhiteReal, borderColor: '#eda100', borderWidth: 2, pointRadius: 2, tension: 0.15, spanGaps: false },
+    { label: 'White, nominal', data: d3PriceWhiteNom, borderColor: '#eda100', borderDash: [6,4], borderWidth: 2, pointRadius: 2, tension: 0.15, spanGaps: false },
+    { label: 'Red, real (2000$)', data: d3PriceRedReal, borderColor: '#e34948', borderWidth: 2, pointRadius: 2, tension: 0.15, spanGaps: false },
+    { label: 'Red, nominal', data: d3PriceRedNom, borderColor: '#e34948', borderDash: [6,4], borderWidth: 2, pointRadius: 2, tension: 0.15, spanGaps: false }
+  ] },
+  options: baseOpts(priceFmt)
+});
+</script>
+</body>
+</html>
