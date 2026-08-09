@@ -1,0 +1,372 @@
+respondent_id,question_id,question_text,answer
+R1,S1,Timestamp,2026-08-07 00:14:22.135000
+R1,S2,What's your age range?,30-39
+R1,S3,Which best describes you right now?,Young professional
+R1,S4,What's your gender? (optional),Prefer not to say
+R1,S5,What's your general location? (optional),SF Bay Area
+R1,S6,Do you currently drink alcohol?,Yes
+R1,S7,"In a typical week, about how many alcoholic drinks do you have?",7-14
+R1,S8,How often do you drink each of these? [Wine],About monthly
+R1,S9,How often do you drink each of these? [Beer],Most of what I drink
+R1,S10,How often do you drink each of these? [Spirits or cocktails],About weekly
+R1,S11,How often do you drink each of these? [Hard seltzer or ready-to-drink cocktails],Never
+R1,S12,How often do you drink each of these? [Cider],Never
+R1,S13,How often do you drink each of these? [Non-alcoholic alternatives],About monthly
+R1,S15,"Just to confirm, do you currently drink wine?",Yes
+R1,S20,"Overall, how particular or picky are you about the wine you drink?",Not particular at all
+R1,S21,How often do you drink wine?,About monthly or less
+R1,S22,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Grape variety or style],Rank 1 (most important)
+R1,S25,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Price],Rank 3
+R1,S26,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Recommendations],Rank 2
+R1,S30,Which single factor most often decides which bottle you actually pick up?,Grape variety or style
+R1,S31,Where do you usually buy wine? (select all that apply),Grocery store
+R1,S32,"Think about the last time you really enjoyed a glass of wine, which of these were part of what made it good? Check up to three.","The company, The wine itself, A special occasion"
+R1,S33,"Still thinking about that time, tell us about it: where were you, what was the wine, what else do you remember?",I was home after just moving In with my partner. We opened a wine we bought while on vacation to celebrate the move.
+R1,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,Yes
+R1,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Somewhat negative
+R1,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)","Cost, Don't know where to start or who to visit, It’s overhyped and overpriced"
+R1,S37,"Compared to 3 years ago, how has your wine drinking changed?",A little less
+R1,S38,What has taken up that space instead? (select all that apply),Beer
+R1,S39,What are factors that influence your wine drinking choice? (select all that apply),"Social and peer influence, Enjoy the taste"
+R1,S40,Would you be willing to do a short follow-up interview about your wine habits?,No
+R2,S1,Timestamp,2026-08-07 05:47:22.037000
+R2,S2,What's your age range?,25-29
+R2,S3,Which best describes you right now?,Young professional
+R2,S4,What's your gender? (optional),Woman
+R2,S5,What's your general location? (optional),SF Bay Area
+R2,S6,Do you currently drink alcohol?,Yes
+R2,S7,"In a typical week, about how many alcoholic drinks do you have?",3-6
+R2,S8,How often do you drink each of these? [Wine],About weekly
+R2,S9,How often do you drink each of these? [Beer],About weekly
+R2,S10,How often do you drink each of these? [Spirits or cocktails],About monthly
+R2,S11,How often do you drink each of these? [Hard seltzer or ready-to-drink cocktails],About monthly
+R2,S12,How often do you drink each of these? [Cider],Occasionally
+R2,S13,How often do you drink each of these? [Non-alcoholic alternatives],Occasionally
+R2,S15,"Just to confirm, do you currently drink wine?",Yes
+R2,S20,"Overall, how particular or picky are you about the wine you drink?",Somewhat particular
+R2,S21,How often do you drink wine?,About weekly
+R2,S22,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Grape variety or style],Rank 1 (most important)
+R2,S23,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Region or terroir],Rank 2
+R2,S24,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Winery or brand reputation],Rank 3
+R2,S25,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Price],Rank 1 (most important)
+R2,S26,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Recommendations],Rank 2
+R2,S27,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Sustainability certification],Rank 3
+R2,S30,Which single factor most often decides which bottle you actually pick up?,Grape variety or style
+R2,S31,Where do you usually buy wine? (select all that apply),"Grocery store, Specialty wine or liquor store, Restaurant or bar"
+R2,S32,"Think about the last time you really enjoyed a glass of wine, which of these were part of what made it good? Check up to three.","The company, The place or view, Good value for the price"
+R2,S33,"Still thinking about that time, tell us about it: where were you, what was the wine, what else do you remember?",A cold vinho verde was recommended to me by an employee at a high end grocery store. I brought it to share with a friend I was visiting and it paired well with the food and we shared a lovely time outside catching up. Each of us only had about a glass and a half but really enjoyed it.
+R2,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,Yes
+R2,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Somewhat negative
+R2,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)","Don't know where to start or who to visit, Some places too touristy / crowded"
+R2,S37,"Compared to 3 years ago, how has your wine drinking changed?",A little less
+R2,S38,What has taken up that space instead? (select all that apply),Beer
+R2,S39,What are factors that influence your wine drinking choice? (select all that apply),"Social and peer influence, Cultural zeitgeist, Enjoy the taste"
+R2,S40,Would you be willing to do a short follow-up interview about your wine habits?,Yes
+R3,S1,Timestamp,2026-08-07 12:20:06.701000
+R3,S2,What's your age range?,50+
+R3,S3,Which best describes you right now?,Seasoned professional
+R3,S4,What's your gender? (optional),Man
+R3,S5,What's your general location? (optional),Elsewhere in the US
+R3,S6,Do you currently drink alcohol?,Yes
+R3,S7,"In a typical week, about how many alcoholic drinks do you have?",1-2
+R3,S8,How often do you drink each of these? [Wine],Occasionally
+R3,S9,How often do you drink each of these? [Beer],Occasionally
+R3,S10,How often do you drink each of these? [Spirits or cocktails],Never
+R3,S11,How often do you drink each of these? [Hard seltzer or ready-to-drink cocktails],Never
+R3,S12,How often do you drink each of these? [Cider],Occasionally
+R3,S13,How often do you drink each of these? [Non-alcoholic alternatives],Occasionally
+R3,S15,"Just to confirm, do you currently drink wine?",Yes
+R3,S20,"Overall, how particular or picky are you about the wine you drink?",Somewhat particular
+R3,S21,How often do you drink wine?,About weekly
+R3,S22,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Grape variety or style],Rank 2
+R3,S23,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Region or terroir],Rank 3
+R3,S25,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Price],Rank 1 (most important)
+R3,S30,Which single factor most often decides which bottle you actually pick up?,Price
+R3,S31,Where do you usually buy wine? (select all that apply),Specialty wine or liquor store
+R3,S32,"Think about the last time you really enjoyed a glass of wine, which of these were part of what made it good? Check up to three.",The food
+R3,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,No
+R3,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Very positive
+R3,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)","Distance or travel time, Cost"
+R3,S37,"Compared to 3 years ago, how has your wine drinking changed?",A little less
+R3,S38,What has taken up that space instead? (select all that apply),Nothing in particular
+R3,S39,What are factors that influence your wine drinking choice? (select all that apply),Enjoy the taste
+R3,S40,Would you be willing to do a short follow-up interview about your wine habits?,No
+R4,S1,Timestamp,2026-08-07 12:21:44.494000
+R4,S2,What's your age range?,40-49
+R4,S3,Which best describes you right now?,Seasoned professional
+R4,S4,What's your gender? (optional),Man
+R4,S5,What's your general location? (optional),SF Bay Area
+R4,S6,Do you currently drink alcohol?,Yes
+R4,S7,"In a typical week, about how many alcoholic drinks do you have?",0 to 1
+R4,S8,How often do you drink each of these? [Wine],About monthly
+R4,S9,How often do you drink each of these? [Beer],About weekly
+R4,S10,How often do you drink each of these? [Spirits or cocktails],Never
+R4,S11,How often do you drink each of these? [Hard seltzer or ready-to-drink cocktails],Never
+R4,S12,How often do you drink each of these? [Cider],Never
+R4,S13,How often do you drink each of these? [Non-alcoholic alternatives],Occasionally
+R4,S15,"Just to confirm, do you currently drink wine?",Yes
+R4,S20,"Overall, how particular or picky are you about the wine you drink?",Not particular at all
+R4,S21,How often do you drink wine?,About monthly or less
+R4,S22,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Grape variety or style],Rank 1 (most important)
+R4,S25,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Price],Rank 2
+R4,S26,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Recommendations],Rank 3
+R4,S30,Which single factor most often decides which bottle you actually pick up?,Grape variety or style
+R4,S31,Where do you usually buy wine? (select all that apply),Grocery store
+R4,S32,"Think about the last time you really enjoyed a glass of wine, which of these were part of what made it good? Check up to three.","The company, The place or view, A special occasion"
+R4,S33,"Still thinking about that time, tell us about it: where were you, what was the wine, what else do you remember?",Wine tasting in Napa with family
+R4,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,Yes
+R4,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Very positive
+R4,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)",Time or scheduling
+R4,S37,"Compared to 3 years ago, how has your wine drinking changed?",A little less
+R4,S38,What has taken up that space instead? (select all that apply),Beer
+R4,S40,Would you be willing to do a short follow-up interview about your wine habits?,Yes
+R5,S1,Timestamp,2026-08-07 12:28:32.132000
+R5,S2,What's your age range?,40-49
+R5,S3,Which best describes you right now?,Seasoned professional
+R5,S4,What's your gender? (optional),Woman
+R5,S5,What's your general location? (optional),SF Bay Area
+R5,S6,Do you currently drink alcohol?,"No, but I used to"
+R5,S17,What's the main reason you stopped drinking?,Health reasons
+R5,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,Yes
+R5,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Very positive
+R5,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)","Distance or travel time, Time or scheduling"
+R5,S37,"Compared to 3 years ago, how has your wine drinking changed?",A little less
+R5,S38,What has taken up that space instead? (select all that apply),"Non-alcoholic beverages, Nothing in particular"
+R5,S39,What are factors that influence your wine drinking choice? (select all that apply),Health and wellness
+R5,S40,Would you be willing to do a short follow-up interview about your wine habits?,No
+R6,S1,Timestamp,2026-08-07 12:29:18.390000
+R6,S2,What's your age range?,40-49
+R6,S3,Which best describes you right now?,Seasoned professional
+R6,S4,What's your gender? (optional),Woman
+R6,S5,What's your general location? (optional),SF Bay Area
+R6,S6,Do you currently drink alcohol?,Yes
+R6,S7,"In a typical week, about how many alcoholic drinks do you have?",1-2
+R6,S8,How often do you drink each of these? [Wine],About weekly
+R6,S9,How often do you drink each of these? [Beer],Most of what I drink
+R6,S10,How often do you drink each of these? [Spirits or cocktails],About monthly
+R6,S11,How often do you drink each of these? [Hard seltzer or ready-to-drink cocktails],Occasionally
+R6,S12,How often do you drink each of these? [Cider],About monthly
+R6,S13,How often do you drink each of these? [Non-alcoholic alternatives],Occasionally
+R6,S14,How often do you drink each of these? [Other],Never
+R6,S15,"Just to confirm, do you currently drink wine?",Yes
+R6,S20,"Overall, how particular or picky are you about the wine you drink?",Somewhat particular
+R6,S21,How often do you drink wine?,About weekly
+R6,S22,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Grape variety or style],Rank 2
+R6,S25,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Price],Rank 3
+R6,S26,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Recommendations],Rank 1 (most important)
+R6,S30,Which single factor most often decides which bottle you actually pick up?,"A recommendation (friend, staff, sommelier)"
+R6,S31,Where do you usually buy wine? (select all that apply),Grocery store
+R6,S32,"Think about the last time you really enjoyed a glass of wine, which of these were part of what made it good? Check up to three.","The company, A special occasion, Relaxing or unwinding"
+R6,S33,"Still thinking about that time, tell us about it: where were you, what was the wine, what else do you remember?",Pet bat from donkey and goat because my friends recommended it and I was saving it for a relaxing evening
+R6,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,No
+R6,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Somewhat positive
+R6,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)","Cost, Time or scheduling, Sounds crowded"
+R6,S37,"Compared to 3 years ago, how has your wine drinking changed?",A little less
+R6,S38,What has taken up that space instead? (select all that apply),"Beer, Non-alcoholic beverages"
+R6,S39,What are factors that influence your wine drinking choice? (select all that apply),"Health and wellness, Social and peer influence, Enjoy the taste"
+R6,S40,Would you be willing to do a short follow-up interview about your wine habits?,Yes
+R7,S1,Timestamp,2026-08-07 12:30:50.013000
+R7,S2,What's your age range?,30-39
+R7,S3,Which best describes you right now?,Seasoned professional
+R7,S4,What's your gender? (optional),Woman
+R7,S5,What's your general location? (optional),SF Bay Area
+R7,S6,Do you currently drink alcohol?,Yes
+R7,S7,"In a typical week, about how many alcoholic drinks do you have?",0 to 1
+R7,S8,How often do you drink each of these? [Wine],Occasionally
+R7,S9,How often do you drink each of these? [Beer],Never
+R7,S10,How often do you drink each of these? [Spirits or cocktails],Occasionally
+R7,S11,How often do you drink each of these? [Hard seltzer or ready-to-drink cocktails],Never
+R7,S12,How often do you drink each of these? [Cider],Occasionally
+R7,S13,How often do you drink each of these? [Non-alcoholic alternatives],Occasionally
+R7,S14,How often do you drink each of these? [Other],Never
+R7,S15,"Just to confirm, do you currently drink wine?","No, rarely or never"
+R7,S18,Why doesn't wine make your rotation?,Drinking socially so rarely drink at home
+R7,S19,"In a typical month, where do you usually drink?","At restaurants or bars, At friends' or family's homes, At parties, weddings, or other events"
+R7,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,Yes
+R7,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Very positive
+R7,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)","Distance or travel time, Time or scheduling"
+R7,S37,"Compared to 3 years ago, how has your wine drinking changed?",A lot less
+R7,S38,What has taken up that space instead? (select all that apply),"Spirits or cocktails, Non-alcoholic beverages"
+R7,S39,What are factors that influence your wine drinking choice? (select all that apply),"I like wine but I also like cocktails, which are my go to when I go out"
+R7,S40,Would you be willing to do a short follow-up interview about your wine habits?,No
+R8,S1,Timestamp,2026-08-07 13:03:03.246000
+R8,S2,What's your age range?,40-49
+R8,S3,Which best describes you right now?,Seasoned professional
+R8,S4,What's your gender? (optional),Man
+R8,S5,What's your general location? (optional),SF Bay Area
+R8,S6,Do you currently drink alcohol?,"No, but I used to"
+R8,S17,What's the main reason you stopped drinking?,Don't like the taste or effects
+R8,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,Yes
+R8,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Somewhat positive
+R8,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)",don't drink
+R8,S37,"Compared to 3 years ago, how has your wine drinking changed?",About the same
+R8,S38,What has taken up that space instead? (select all that apply),Non-alcoholic beverages
+R8,S39,What are factors that influence your wine drinking choice? (select all that apply),"Health and wellness, Social and peer influence, N/A (I don't drink wine)"
+R8,S40,Would you be willing to do a short follow-up interview about your wine habits?,Yes
+R9,S1,Timestamp,2026-08-07 13:08:00.026000
+R9,S2,What's your age range?,40-49
+R9,S3,Which best describes you right now?,Older and wiser
+R9,S4,What's your gender? (optional),Woman
+R9,S5,What's your general location? (optional),SF Bay Area
+R9,S6,Do you currently drink alcohol?,Yes
+R9,S7,"In a typical week, about how many alcoholic drinks do you have?",1-2
+R9,S8,How often do you drink each of these? [Wine],Occasionally
+R9,S9,How often do you drink each of these? [Beer],About weekly
+R9,S10,How often do you drink each of these? [Spirits or cocktails],Occasionally
+R9,S11,How often do you drink each of these? [Hard seltzer or ready-to-drink cocktails],Never
+R9,S12,How often do you drink each of these? [Cider],Never
+R9,S13,How often do you drink each of these? [Non-alcoholic alternatives],Most of what I drink
+R9,S15,"Just to confirm, do you currently drink wine?",Yes
+R9,S20,"Overall, how particular or picky are you about the wine you drink?",Somewhat particular
+R9,S21,How often do you drink wine?,About monthly or less
+R9,S23,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Region or terroir],Rank 1 (most important)
+R9,S25,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Price],Rank 3
+R9,S27,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Sustainability certification],Rank 2
+R9,S30,Which single factor most often decides which bottle you actually pick up?,Region or terroir
+R9,S31,Where do you usually buy wine? (select all that apply),"Grocery store, Specialty wine or liquor store, Restaurant or bar"
+R9,S32,"Think about the last time you really enjoyed a glass of wine, which of these were part of what made it good? Check up to three.","The company, The wine itself, Relaxing or unwinding"
+R9,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,No
+R9,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Somewhat positive
+R9,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)",Distance or travel time
+R9,S37,"Compared to 3 years ago, how has your wine drinking changed?",A lot less
+R9,S38,What has taken up that space instead? (select all that apply),"Beer, Non-alcoholic beverages, Sparkling water"
+R9,S39,What are factors that influence your wine drinking choice? (select all that apply),"Health and wellness, More natural wine / I get headaches"
+R9,S40,Would you be willing to do a short follow-up interview about your wine habits?,No
+R10,S1,Timestamp,2026-08-07 13:13:18.708000
+R10,S2,What's your age range?,40-49
+R10,S3,Which best describes you right now?,Graduate student
+R10,S4,What's your gender? (optional),Woman
+R10,S5,What's your general location? (optional),SF Bay Area
+R10,S6,Do you currently drink alcohol?,Yes
+R10,S7,"In a typical week, about how many alcoholic drinks do you have?",0 to 1
+R10,S8,How often do you drink each of these? [Wine],Occasionally
+R10,S9,How often do you drink each of these? [Beer],Occasionally
+R10,S10,How often do you drink each of these? [Spirits or cocktails],Never
+R10,S11,How often do you drink each of these? [Hard seltzer or ready-to-drink cocktails],Never
+R10,S12,How often do you drink each of these? [Cider],Never
+R10,S13,How often do you drink each of these? [Non-alcoholic alternatives],Most of what I drink
+R10,S15,"Just to confirm, do you currently drink wine?",Yes
+R10,S20,"Overall, how particular or picky are you about the wine you drink?",Somewhat particular
+R10,S21,How often do you drink wine?,About monthly or less
+R10,S22,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Grape variety or style],Rank 1 (most important)
+R10,S24,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Winery or brand reputation],Rank 3
+R10,S25,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Price],Rank 2
+R10,S30,Which single factor most often decides which bottle you actually pick up?,Grape variety or style
+R10,S31,Where do you usually buy wine? (select all that apply),"Winery tasting room or wine club, Specialty wine or liquor store, Restaurant or bar, Wine club or subscription"
+R10,S32,"Think about the last time you really enjoyed a glass of wine, which of these were part of what made it good? Check up to three.","The wine itself, The food, Relaxing or unwinding"
+R10,S33,"Still thinking about that time, tell us about it: where were you, what was the wine, what else do you remember?",Napa Valley and enjoying a food tasting along with the wine.
+R10,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,Yes
+R10,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Very positive
+R10,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)",Time or scheduling
+R10,S37,"Compared to 3 years ago, how has your wine drinking changed?",A little more
+R10,S38,What has taken up that space instead? (select all that apply),Non-alcoholic beverages
+R10,S39,What are factors that influence your wine drinking choice? (select all that apply),"Social and peer influence, Enjoy the taste"
+R10,S40,Would you be willing to do a short follow-up interview about your wine habits?,No
+R11,S1,Timestamp,2026-08-07 13:22:56.817000
+R11,S2,What's your age range?,40-49
+R11,S3,Which best describes you right now?,Seasoned professional
+R11,S4,What's your gender? (optional),Woman
+R11,S5,What's your general location? (optional),SF Bay Area
+R11,S6,Do you currently drink alcohol?,Yes
+R11,S7,"In a typical week, about how many alcoholic drinks do you have?",0 to 1
+R11,S8,How often do you drink each of these? [Wine],Occasionally
+R11,S9,How often do you drink each of these? [Beer],Never
+R11,S10,How often do you drink each of these? [Spirits or cocktails],Occasionally
+R11,S11,How often do you drink each of these? [Hard seltzer or ready-to-drink cocktails],Never
+R11,S12,How often do you drink each of these? [Cider],Never
+R11,S13,How often do you drink each of these? [Non-alcoholic alternatives],Never
+R11,S15,"Just to confirm, do you currently drink wine?",Yes
+R11,S20,"Overall, how particular or picky are you about the wine you drink?",Somewhat particular
+R11,S21,How often do you drink wine?,About weekly
+R11,S22,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Grape variety or style],Rank 2
+R11,S25,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Price],Rank 3
+R11,S26,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Recommendations],Rank 1 (most important)
+R11,S30,Which single factor most often decides which bottle you actually pick up?,Labor art
+R11,S31,Where do you usually buy wine? (select all that apply),Specialty wine or liquor store
+R11,S32,"Think about the last time you really enjoyed a glass of wine, which of these were part of what made it good? Check up to three.","The company, A recommendation or guided pour"
+R11,S33,"Still thinking about that time, tell us about it: where were you, what was the wine, what else do you remember?",Mile limit in Berkeley. Spanish white
+R11,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,No
+R11,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Neutral
+R11,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)",Distance or travel time
+R11,S37,"Compared to 3 years ago, how has your wine drinking changed?",A little more
+R11,S39,What are factors that influence your wine drinking choice? (select all that apply),"Health and wellness, Kids. You need more alcohol when you have kids"
+R11,S40,Would you be willing to do a short follow-up interview about your wine habits?,No
+R12,S1,Timestamp,2026-08-07 13:31:36.049000
+R12,S2,What's your age range?,40-49
+R12,S3,Which best describes you right now?,Seasoned professional
+R12,S4,What's your gender? (optional),Woman
+R12,S5,What's your general location? (optional),Elsewhere in CA
+R12,S6,Do you currently drink alcohol?,Yes
+R12,S7,"In a typical week, about how many alcoholic drinks do you have?",1-2
+R12,S8,How often do you drink each of these? [Wine],About weekly
+R12,S9,How often do you drink each of these? [Beer],About monthly
+R12,S10,How often do you drink each of these? [Spirits or cocktails],Occasionally
+R12,S11,How often do you drink each of these? [Hard seltzer or ready-to-drink cocktails],Occasionally
+R12,S12,How often do you drink each of these? [Cider],Occasionally
+R12,S13,How often do you drink each of these? [Non-alcoholic alternatives],Never
+R12,S15,"Just to confirm, do you currently drink wine?",Yes
+R12,S20,"Overall, how particular or picky are you about the wine you drink?",Somewhat particular
+R12,S21,How often do you drink wine?,About weekly
+R12,S22,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Grape variety or style],Rank 1 (most important)
+R12,S23,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Region or terroir],Rank 3
+R12,S24,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Winery or brand reputation],Rank 2
+R12,S25,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Price],Rank 2
+R12,S26,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Recommendations],Rank 2
+R12,S27,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Sustainability certification],Rank 3
+R12,S30,Which single factor most often decides which bottle you actually pick up?,Price
+R12,S31,Where do you usually buy wine? (select all that apply),"Grocery store, Specialty wine or liquor store, Restaurant or bar"
+R12,S32,"Think about the last time you really enjoyed a glass of wine, which of these were part of what made it good? Check up to three.","The company, The place or view, Relaxing or unwinding"
+R12,S33,"Still thinking about that time, tell us about it: where were you, what was the wine, what else do you remember?",I was on vacation with family
+R12,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,Yes
+R12,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Very positive
+R12,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)",Cost
+R12,S37,"Compared to 3 years ago, how has your wine drinking changed?",A little less
+R12,S38,What has taken up that space instead? (select all that apply),Non-alcoholic beverages
+R12,S39,What are factors that influence your wine drinking choice? (select all that apply),"Health and wellness, Social and peer influence"
+R12,S40,Would you be willing to do a short follow-up interview about your wine habits?,Yes
+R13,S1,Timestamp,2026-08-07 13:35:07.843000
+R13,S2,What's your age range?,21-24
+R13,S3,Which best describes you right now?,Young professional
+R13,S4,What's your gender? (optional),Man
+R13,S5,What's your general location? (optional),SF Bay Area
+R13,S6,Do you currently drink alcohol?,"No, never really have"
+R13,S16,What's the main reason you don't drink?,"Don't like the taste or effects, Never had a reason to start"
+R13,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,Yes
+R13,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Somewhat positive
+R13,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)",No particular reason
+R13,S37,"Compared to 3 years ago, how has your wine drinking changed?",About the same
+R13,S38,What has taken up that space instead? (select all that apply),Nothing in particular
+R13,S39,What are factors that influence your wine drinking choice? (select all that apply),"Social and peer influence, N/A (I don't drink wine)"
+R13,S40,Would you be willing to do a short follow-up interview about your wine habits?,No
+R14,S1,Timestamp,2026-08-07 20:49:59.639000
+R14,S2,What's your age range?,50+
+R14,S3,Which best describes you right now?,Retired
+R14,S4,What's your gender? (optional),Man
+R14,S5,What's your general location? (optional),Elsewhere in the US
+R14,S6,Do you currently drink alcohol?,Yes
+R14,S7,"In a typical week, about how many alcoholic drinks do you have?",3-6
+R14,S8,How often do you drink each of these? [Wine],About weekly
+R14,S9,How often do you drink each of these? [Beer],Never
+R14,S10,How often do you drink each of these? [Spirits or cocktails],Never
+R14,S11,How often do you drink each of these? [Hard seltzer or ready-to-drink cocktails],Never
+R14,S12,How often do you drink each of these? [Cider],Never
+R14,S13,How often do you drink each of these? [Non-alcoholic alternatives],Never
+R14,S14,How often do you drink each of these? [Other],Never
+R14,S15,"Just to confirm, do you currently drink wine?",Yes
+R14,S20,"Overall, how particular or picky are you about the wine you drink?",Very particular
+R14,S21,How often do you drink wine?,About weekly
+R14,S22,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Grape variety or style],Rank 1 (most important)
+R14,S23,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Region or terroir],Rank 2
+R14,S25,Rank the top 3 factors that matter most when you choose a wine (1 = most important) [Price],Rank 3
+R14,S29,"If you ranked ""Other,"" what was it?",Water
+R14,S30,Which single factor most often decides which bottle you actually pick up?,Grape variety or style
+R14,S31,Where do you usually buy wine? (select all that apply),"Specialty wine or liquor store, Wine club or subscription"
+R14,S32,"Think about the last time you really enjoyed a glass of wine, which of these were part of what made it good? Check up to three.","The wine itself, The food, The wine's story"
+R14,S33,"Still thinking about that time, tell us about it: where were you, what was the wine, what else do you remember?",At Vinyard
+R14,S34,Have you visited Sonoma or Napa wine country in the last 2 years?,Yes
+R14,S35,What's your overall impression of Sonoma or Napa as a place to buy or drink wine?,Neutral
+R14,S36,"What, if anything, keeps you from visiting Sonoma or Napa more often? (select all that apply)",Cost
+R14,S37,"Compared to 3 years ago, how has your wine drinking changed?",A little less
+R14,S38,What has taken up that space instead? (select all that apply),Water
+R14,S39,What are factors that influence your wine drinking choice? (select all that apply),Health and wellness
+R14,S40,Would you be willing to do a short follow-up interview about your wine habits?,Yes

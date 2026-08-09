@@ -1,0 +1,22 @@
+hypothesis,interview_id,stance,basis_short,source_note
+H1,H12-2026-07-29,supports,value positioning wins; members cancel pricier clubs first; high-price peers closed,2026-07-29-highway-12-notes.md
+H1,GF-2026-08-04,supports-weak,customers cite price/value first; stated value strategy; thin self-report,2026-08-04-greater-fool-wine-notes.md
+H1,WM-2026-07-24,mixed,ticket down and over-30 resale wall point to price; no churn-reason data,2026-07-24-wine-mine-chuck-notes.md
+H1,OH-2026-07-27,mixed,"inflation named alongside Gen Z, post-covid and health",2026-07-27-onehope-justine-notes.md
+H1,JAY-2026-08-08,opposes,GLP-1 and broken habit named the biggest cause; price appears only as visit-cost backlash,2026-08-08-jay-boberg-notes.md
+H1,GAL-2026-08-05,mixed,inflation and visit cost named together with GLP-1 and health,2026-08-05-gallo-notes.md
+H1,SURVEY-2026-08-08,mixed,"frequency cuts co-occur with health and substitution; all 10 factor-rankers put price in their top 3 (2 ranked it first) and cost is a visit barrier for 5 of 14, matching the C5 split",consumer-field/consumer-survey-data.csv
+H2,H12-2026-07-29,mixed,"club grows, yet churn reasons are health and medication inside a 50-plus core",2026-07-29-highway-12-notes.md
+H2,GF-2026-08-04,mixed,members up but renewals down; little change in buyer mix,2026-08-04-greater-fool-wine-notes.md
+H2,WM-2026-07-24,silent,"steady club, no buyer-demographic data at the shop level",2026-07-24-wine-mine-chuck-notes.md
+H2,OH-2026-07-27,supports,Gen Z not drinking named; direct channel flat while winery-channel spend edges up,2026-07-27-onehope-justine-notes.md
+H2,JAY-2026-08-08,mixed,"fine-wine audience 40-70 insulates against the youth gap, but GLP-1 pulls back the 40-plus heavy-drinking core itself",2026-08-08-jay-boberg-notes.md
+H2,GAL-2026-08-05,mixed,boomer clubs eroding via GLP-1 and health while the Gen Z entry gap is also named,2026-08-05-gallo-notes.md
+H2,SURVEY-2026-08-08,opposes,5 of the 8 core-age (40-49) respondents report drinking less (2 more, 1 same),consumer-field/consumer-survey-data.csv
+H3,H12-2026-07-29,supports,in-house DTC execution and the communal club grew sales and membership in a falling market; note the significant Costco wholesale leg,2026-07-29-highway-12-notes.md
+H3,JAY-2026-08-08,supports,club as survival channel plus community differentiation; caveat: pure-direct concentration risk in 2007-08,2026-08-08-jay-boberg-notes.md
+H3,GF-2026-08-04,supports-weak,"direct share up, DTC-focused winners, new varieties at par margins; self-reported",2026-08-04-greater-fool-wine-notes.md
+H3,GAL-2026-08-05,mixed,community model worked (Rambauer) but the winning moves shown are scale and brand plays,2026-08-05-gallo-notes.md
+H3,WM-2026-07-24,silent,retail lens only; accessible-price format innovation hinted,2026-07-24-wine-mine-chuck-notes.md
+H3,OH-2026-07-27,silent,static online top-10 hints discovery is hard in that channel; too thin to score,2026-07-27-onehope-justine-notes.md
+H3,SURVEY-2026-08-08,silent,no direct evidence on winery strategy; enjoyment stories are occasion and company driven,consumer-field/consumer-survey-data.csv

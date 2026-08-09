@@ -1,0 +1,82 @@
+interview_id,variable,code,basis_verbatim,source_note,hypotheses
+WM-2026-07-24,traffic_dir,flat,Not much change sin demand from last year,2026-07-24-wine-mine-chuck-notes.md,H2
+WM-2026-07-24,ticket_dir,down,"usually they would've bought a case for example, not more the tote bags",2026-07-24-wine-mine-chuck-notes.md,H1;H2
+WM-2026-07-24,club_members_dir,flat,They are fairly steady state,2026-07-24-wine-mine-chuck-notes.md,H2
+WM-2026-07-24,price_point_shift,up,"Had been selling 15, now more 20-25 (form E2)",2026-07-24-wine-mine-chuck-notes.md,H1
+WM-2026-07-24,delist_threshold,over-30-hard-to-resell,In theor 30s we have to get really picky (form E4),2026-07-24-wine-mine-chuck-notes.md,H1
+WM-2026-07-24,na_substitutes_stocked,expanding,Acohol free wines an cocktails - was seasonal and now keep them,2026-07-24-wine-mine-chuck-notes.md,C6
+WM-2026-07-24,competing_categories,seltzers;kombucha;premix;sake;gluten-free-beer;sparkling-tea,"Hard seltzers, kombucha, pre-mix cocktails",2026-07-24-wine-mine-chuck-notes.md,C6
+WM-2026-07-24,regional_marketing_evidence,none-seen,Haven't seen any (form E3),2026-07-24-wine-mine-chuck-notes.md,lever:regional-marketing
+WM-2026-07-24,gatekeeper,sales-reps-and-distributors,Almost always they are intro'd through sales rep or distributor (form E4),2026-07-24-wine-mine-chuck-notes.md,ecosystem-map
+WM-2026-07-24,innovation_named,packaging;red-white-blends,minimize glass in a bottle ... unapologetic blending of red and white wine,2026-07-24-wine-mine-chuck-notes.md,lever:format
+WM-2026-07-24,supply_correction,vine-pulls-expected-3-5yr-lag,it takes 3-5 years to get any fruit off a new vine,2026-07-24-wine-mine-chuck-notes.md,lever:supply
+WM-2026-07-24,sentiment,downturn-real,The wine industry is getting ready to panic,2026-07-24-wine-mine-chuck-notes.md,H1;H2
+WM-2026-07-24,tariff_effect,msrp-ratchet-uncertainty,Ratcheting up the MRSP - any chase that was 100 is not 120 (form E2),2026-07-24-wine-mine-chuck-notes.md,C5
+OH-2026-07-27,demand_dir,down-since-2023,since 2023 the demand has just dropped,2026-07-27-onehope-justine-notes.md,H1;H2
+OH-2026-07-27,drivers_named,post-covid;genz-not-drinking;inflation;health,"Post covid drinking, Gen Z not drinking, inflation ... more of a health kick too",2026-07-27-onehope-justine-notes.md,C5;C6;H2
+OH-2026-07-27,traffic_vs_ticket,winery-spend-up-direct-flat,How much they are spending has increased a little ... direct side is still really flat,2026-07-27-onehope-justine-notes.md,H2
+OH-2026-07-27,price_tiers,20-to-1000; 60pct-low-mid-volume,Bulk: 60% low to medium,2026-07-27-onehope-justine-notes.md,H1
+OH-2026-07-27,online_gatekeeper,trend-driven; top10-static-10yr,Top 10 wines in that channel are the top 10 of the past 10 years,2026-07-27-onehope-justine-notes.md,H3
+OH-2026-07-27,supply_glut,juice-surplus,There is a lot of juice on the market right now,2026-07-27-onehope-justine-notes.md,lever:supply
+OH-2026-07-27,competition_frame,not-drinking,Competition is like not drinking,2026-07-27-onehope-justine-notes.md,C6
+OH-2026-07-27,innovation_named,small-format-cans; flavor-issues,Cans were a hit for a while ... Flavor changes when you bottle it in a different format,2026-07-27-onehope-justine-notes.md,lever:format
+OH-2026-07-27,na_interest,exploring,Looking into NA wine options,2026-07-27-onehope-justine-notes.md,lever:format
+OH-2026-07-27,occasions,holiday-gifting,Do a lot fo sales during the holidays - also about gifting,2026-07-27-onehope-justine-notes.md,H3
+JAY-2026-08-08,drivers_named,glp1-primary;cannabis;media-cycle,GLP-1 drugs (Ozempic etc.) likely the single biggest direct cause,2026-08-08-jay-boberg-notes.md,C5;C6;H2
+JAY-2026-08-08,glp1_persistence,habit-broken-6-9mo,People coming off the drugs still drinking very little: habit broken after 6-9 months,2026-08-08-jay-boberg-notes.md,C5
+JAY-2026-08-08,youth_decline_view,skeptical-of-data,"Skeptical that younger generations are inherently drinking less: no solid data, mostly anecdotal",2026-08-08-jay-boberg-notes.md,H2
+JAY-2026-08-08,segment_insulation,fine-wine-audience-40-70,Fine wine ($50+) audience was always primarily 40-70,2026-08-08-jay-boberg-notes.md,H2
+JAY-2026-08-08,traffic_dir,down-vs-2022-24,Willamette Valley foot traffic down vs. 2022-2024; 2025-2026 flat but below prior peak,2026-08-08-jay-boberg-notes.md,H2
+JAY-2026-08-08,visit_cost_backlash,napa-acute,"tasting fees $75-125, hotels $500-600/night ... Napa hotels reportedly cut rates 15-20%",2026-08-08-jay-boberg-notes.md,H1
+JAY-2026-08-08,club_economics,survival-channel,"~$700-800K per six-month shipment ... Without it, the business would not survive",2026-08-08-jay-boberg-notes.md,H3;lever:dtc
+JAY-2026-08-08,club_tactics,flex-allocations;winery-exclusives,Moved to flexible allocations (mix-and-match) to reduce consumer resistance,2026-08-08-jay-boberg-notes.md,lever:dtc
+JAY-2026-08-08,community_levers,chef-dinners;playlists;under-50-event-win,"nearly half of attendees were under 50, considered a meaningful win",2026-08-08-jay-boberg-notes.md,H3;lever:dtc
+JAY-2026-08-08,concentration_risk,pure-direct-fragile,"Lost ~50% of mailing list revenue in 2007-2008 recession, forced to add restaurant channel",2026-08-08-jay-boberg-notes.md,H3
+JAY-2026-08-08,export_shock,canada-china-lost-15pct-of-export,Canada and China/Hong Kong markets lost (~15% of export) due to politics,2026-08-08-jay-boberg-notes.md,context
+JAY-2026-08-08,channel_structure,three-tier-margin-capture,Winery margin: ~$5-8; restaurant margin: $65-115 on the same bottle,2026-08-08-jay-boberg-notes.md,H3
+H12-2026-07-29,sales_dir,up,Their sales are so strong ... Their numbers are trending up as part of overall sales,2026-07-29-highway-12-notes.md,H1;H3
+H12-2026-07-29,traffic_dir,slightly-down-fluctuating,Tasting room visits have been a little bit slower than when he started ... It fluctuates,2026-07-29-highway-12-notes.md,H2
+H12-2026-07-29,club_members_dir,up,every year their membership continues to grow 1074 club members - which is a trend up,2026-07-29-highway-12-notes.md,H2;H3
+H12-2026-07-29,churn_reasons,health;medication;moved,"Loose members because of health reasons, medication they are on, serious health event, some moved",2026-07-29-highway-12-notes.md,C5;H2
+H12-2026-07-29,relative_price_survival,other-clubs-cancelled-first,members cancelled other clubs because the average bottle proce is higher but they don't cancel them because of teh value,2026-07-29-highway-12-notes.md,H1
+H12-2026-07-29,value_positioning,works,best bank for the buck and that's what he thinks is getting them so strng,2026-07-29-highway-12-notes.md,H1;H3;lever:price-value
+H12-2026-07-29,lever_kept,in-house-phone-email-marketing,doing a lot of that now and it's increased sales ... Taken it in house and that is significantly cheaper,2026-07-29-highway-12-notes.md,lever:dtc
+H12-2026-07-29,lever_kept,communal-club-choice-plus-shipping-tiers,Creating the new club has been exceptional in creating new membership as it broke down barriers to entry,2026-07-29-highway-12-notes.md,lever:dtc
+H12-2026-07-29,wholesale_mix,significant; costco-20yr-exposure,distribution in costco for over 20 years. Even though giving away margin it's great exposiure,2026-07-29-highway-12-notes.md,H3
+H12-2026-07-29,buyer_demo,50-plus-core,average client 50+ - long term older people,2026-07-29-highway-12-notes.md,H2
+H12-2026-07-29,peers_winning,three-sticks;donum,"3 sticks (always full, difficult to get a reservation) / Donnum is doing well also",2026-07-29-highway-12-notes.md,H3
+H12-2026-07-29,drivers_named,youth-income;seltzers;cannabis;tasting-fees,"the seltzers, the spritzers and also the legalization of marijuana could also be competing",2026-07-29-highway-12-notes.md,C6;H2
+H12-2026-07-29,tasting_fee_critique,self-inflicted,charging too much for the wine and the visit they may be shooting themselves in the foot,2026-07-29-highway-12-notes.md,H1;lever:price-value
+H12-2026-07-29,peer_closures,high-price-peers-closed,had great wines but high proces. All the closures happened within the last year,2026-07-29-highway-12-notes.md,H1
+H12-2026-07-29,innovation_named,low-alcohol;carbonated-wine,experimenting with low alcohol wine ... carbonated wine - like a seltzer,2026-07-29-highway-12-notes.md,lever:format
+GAL-2026-08-05,category_dir,wine-beer-down;rtd-up;spirits-flat-to-down,ready to drink has been the only category that's been growing. Wine and beer down,2026-08-05-gallo-notes.md,C6
+GAL-2026-08-05,switching,happening,there is a lot of switching in addition tod elines,2026-08-05-gallo-notes.md,C6
+GAL-2026-08-05,lux_portfolio_dir,down-dramatic,They are definitely down. Her guess pretty dramatically down,2026-08-05-gallo-notes.md,H1;H2
+GAL-2026-08-05,club_demo,boomers,wine clubs are primarily boomers,2026-08-05-gallo-notes.md,H2
+GAL-2026-08-05,drivers_named,glp1;health;inflation;visit-cost,GLP-1s is a major factor for people drinking less and the economics (inflation),2026-08-05-gallo-notes.md,C5
+GAL-2026-08-05,community_lever,rambauer-model-worked,Rambauer was really good at developing really strong community with wine club members and had less expensive but successful tactics,2026-08-05-gallo-notes.md,H3;lever:dtc
+GAL-2026-08-05,genz_acquisition,native-brands,acquired a few brands that have been created by Gen-Z (winey baby) - the packaging is approachable,2026-08-05-gallo-notes.md,H2;lever:brand
+GAL-2026-08-05,image_barrier,unwelcoming-image,feeling that wine is hotey totey that is not welcoming,2026-08-05-gallo-notes.md,H2
+GAL-2026-08-05,single_serve,unsolved-bet,Single serve opportunity has not yet been solved and Gallo is betting on those,2026-08-05-gallo-notes.md,lever:format
+GAL-2026-08-05,supply_glut,distributor-bankruptcy-cascade,One of the biggest distributors just went out of business and there are so many wineries that are then owed 100s of thousands of dollars,2026-08-05-gallo-notes.md,lever:supply
+GAL-2026-08-05,style_shift,aromatic-whites-up-heavy-reds-down,lower ABV aeromatic whites is the area that is doing well,2026-08-05-gallo-notes.md,lever:varieties
+GAL-2026-08-05,scale_caveat,corporate-view,Gallo would have way more efficient supply chain than many of the small wineries,2026-08-05-gallo-notes.md,context
+GF-2026-08-04,sales_vs_cases,dollars-led,Sales grew more,2026-08-04-greater-fool-wine-notes.md,H1
+GF-2026-08-04,traffic_and_ticket,both-up,Both up,2026-08-04-greater-fool-wine-notes.md,H2
+GF-2026-08-04,club,members-up-renewals-down,"Members up, renewals down",2026-08-04-greater-fool-wine-notes.md,H2
+GF-2026-08-04,churn,some,Some churn,2026-08-04-greater-fool-wine-notes.md,H2
+GF-2026-08-04,price_changes,none,No changes,2026-08-04-greater-fool-wine-notes.md,H1
+GF-2026-08-04,lever_tried,new-varieties,New varieties,2026-08-04-greater-fool-wine-notes.md,lever:varieties
+GF-2026-08-04,alt_variety_econ,par-with-flagship,About the same,2026-08-04-greater-fool-wine-notes.md,lever:varieties
+GF-2026-08-04,direct_share_dir,up,Direct share up,2026-08-04-greater-fool-wine-notes.md,H3
+GF-2026-08-04,winners_observed,dtc-focused,DTC-focused,2026-08-04-greater-fool-wine-notes.md,H3
+GF-2026-08-04,customer_reasons,price-value;quality;brand-loyalty,"Price/value, Quality, Brand loyalty",2026-08-04-greater-fool-wine-notes.md,C5
+GF-2026-08-04,value_positioning,stated-strategy,strived to deliver a wine that is truly a great value,2026-08-04-greater-fool-wine-notes.md,H1;H3;lever:price-value
+SURVEY-2026-08-08,wine_freq_dir,less-10-of-14,"A little less x8, A lot less x2, About the same x2, A little more x2 (S37)",../consumer-field/consumer-survey-data.csv,H1;H2
+SURVEY-2026-08-08,substitutes,na-beverages-7;beer-5;nothing-in-particular-3;spirits-1;sparkling-water-1;water-1,S38 selections across 14 respondents,../consumer-field/consumer-survey-data.csv,C6
+SURVEY-2026-08-08,health_influence,7-of-13-answering,Health and wellness selected by 7 of the 13 who answered S39,../consumer-field/consumer-survey-data.csv,C5
+SURVEY-2026-08-08,price_role,in-top3-for-all-10-rankers;rank1-for-2;decisive-for-2,all 10 wine drinkers who ranked factors put price in their top 3, 2 ranked it first (S25); decisive factor for 2 (S30),../consumer-field/consumer-survey-data.csv,C5;H1
+SURVEY-2026-08-08,decisive_factor,variety-5;price-2;recommendation-1;region-1;label-art-1,S30 answers among the 10 wine drinkers who responded,../consumer-field/consumer-survey-data.csv,H3
+SURVEY-2026-08-08,sonoma_napa_impression,very-positive-6;somewhat-positive-4;neutral-2;somewhat-negative-2,S35 across 14 respondents,../consumer-field/consumer-survey-data.csv,H2
+SURVEY-2026-08-08,visit_barriers,distance-5;time-5;cost-5;dont-know-where-to-start-2;touristy-1;sounds-crowded-1;overhyped-1;no-reason-1;dont-drink-1,S36 selections,../consumer-field/consumer-survey-data.csv,H1
+SURVEY-2026-08-08,sample_caveat,n14-convenience-skew-40-49-bay-area,"8 of 14 aged 40-49, 10 of 14 SF Bay Area",../consumer-field/consumer-survey-data.csv,context
