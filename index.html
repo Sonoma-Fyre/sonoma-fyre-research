@@ -3,19 +3,20 @@
 <style>
   :root {
     --paper: #ECE3D0;
-    --surface: #F4EEDF;
-    --surface-2: #E0D6BE;
-    --ink: #1F2F3E;
-    --ink-soft: #55636E;
-    --line: #D6CBB2;
+    --surface: #F5EFE1;
+    --surface-2: #E6DBC2;
+    --ink: #2A2018;
+    --ink-soft: #6C6052;
+    --line: #DDD1B8;
     --brand: #2E5069;
     --brand-hi: #3C6788;
-    --on-brand: #F4EEDF;
-    --moss: #446070;
+    --on-brand: #F5EFE1;
+    --moss: #6C6052;
     --brass: #C9A23A;
     --focus: #2E5069;
-    --band: #234255;
-    --on-band: #F1E7CF;
+    --band: #241C14;
+    --on-band: #F2E8D4;
+    --seal: #223C52;
     --maxw: 1120px;
 
     --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
@@ -24,29 +25,34 @@
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --paper: #14202B;
-      --surface: #1D2C39;
-      --surface-2: #263847;
-      --ink: #EDE4D0;
-      --ink-soft: #A7B3BC;
-      --line: #2C3E4C;
-      --brand: #6FA0BF;
-      --brand-hi: #8AB6D2;
-      --on-brand: #14202B;
-      --moss: #8FB0C2;
+      --paper: #1A1510;
+      --surface: #241D15;
+      --surface-2: #2F2619;
+      --ink: #EFE6D2;
+      --ink-soft: #B6A890;
+      --line: #392E20;
+      --brand: #7FA8C4;
+      --brand-hi: #97BBD4;
+      --on-brand: #1A1510;
+      --moss: #B6A890;
       --brass: #E0B65C;
-      --focus: #6FA0BF;
+      --focus: #7FA8C4;
+      --band: #1F1810;
+      --on-band: #F2E8D4;
+      --seal: #2A4A63;
     }
   }
   :root[data-theme="light"] {
-    --paper: #ECE3D0; --surface: #F4EEDF; --surface-2: #E0D6BE; --ink: #1F2F3E;
-    --ink-soft: #55636E; --line: #D6CBB2; --brand: #2E5069; --brand-hi: #3C6788;
-    --on-brand: #F4EEDF; --moss: #446070; --brass: #C9A23A; --focus: #2E5069;
+    --paper: #ECE3D0; --surface: #F5EFE1; --surface-2: #E6DBC2; --ink: #2A2018;
+    --ink-soft: #6C6052; --line: #DDD1B8; --brand: #2E5069; --brand-hi: #3C6788;
+    --on-brand: #F5EFE1; --moss: #6C6052; --brass: #C9A23A; --focus: #2E5069;
+    --band: #241C14; --on-band: #F2E8D4; --seal: #223C52;
   }
   :root[data-theme="dark"] {
-    --paper: #14202B; --surface: #1D2C39; --surface-2: #263847; --ink: #EDE4D0;
-    --ink-soft: #A7B3BC; --line: #2C3E4C; --brand: #6FA0BF; --brand-hi: #8AB6D2;
-    --on-brand: #14202B; --moss: #8FB0C2; --brass: #E0B65C; --focus: #6FA0BF;
+    --paper: #1A1510; --surface: #241D15; --surface-2: #2F2619; --ink: #EFE6D2;
+    --ink-soft: #B6A890; --line: #392E20; --brand: #7FA8C4; --brand-hi: #97BBD4;
+    --on-brand: #1A1510; --moss: #B6A890; --brass: #E0B65C; --focus: #7FA8C4;
+    --band: #1F1810; --on-band: #F2E8D4; --seal: #2A4A63;
   }
 
   * { box-sizing: border-box; }
@@ -98,7 +104,7 @@
     font-weight: 600;
     padding: 13px 24px;
     border-radius: 999px;
-    border: 1px solid var(--brand);
+    border: 1px solid var(--brass);
     cursor: pointer;
     display: inline-block;
     transition: background .18s ease, color .18s ease, transform .18s ease;
@@ -106,7 +112,7 @@
   .btn:hover { transform: translateY(-1px); }
   .btn-primary { background: var(--brass); color: var(--band); border-color: var(--brass); }
   .btn-primary:hover { background: color-mix(in srgb, var(--brass) 85%, #000); border-color: color-mix(in srgb, var(--brass) 85%, #000); }
-  .btn-ghost { background: transparent; color: var(--brand); }
+  .btn-ghost { background: transparent; color: var(--ink); }
   .btn-ghost:hover { background: var(--surface-2); }
 
   /* Top bar */
@@ -144,7 +150,7 @@
   }
   .ledger div { padding: 18px 4px 18px 0; border-right: 1px solid var(--line); }
   .ledger div:last-child { border-right: 0; }
-  .ledger .n { font-size: 1.7rem; color: var(--brand); font-variant-numeric: tabular-nums; }
+  .ledger .n { font-size: 1.7rem; color: var(--ink); font-variant-numeric: tabular-nums; }
   .ledger .k { display: block; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 6px; }
 
   /* generic section head */
@@ -155,13 +161,13 @@
   /* Problem: old-way list */
   .oldway { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
   .oldway li { list-style: none; background: var(--paper); padding: 26px 24px; }
-  .oldway .tag { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand); }
+  .oldway .tag { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass); }
   .oldway h3 { margin-top: 12px; font-size: 1.14rem; }
   .oldway p { margin-top: 9px; color: var(--ink-soft); font-size: 0.98rem; }
 
   /* Steps */
   .steps { margin-top: 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
-  .step { border-top: 2px solid var(--brand); padding-top: 18px; }
+  .step { border-top: 2px solid var(--brass); padding-top: 18px; }
   .step .num { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em; color: var(--brass); }
   .step h3 { margin-top: 10px; }
   .step p { margin-top: 10px; color: var(--ink-soft); font-size: 0.98rem; }
@@ -175,8 +181,8 @@
   .vcard p { margin-top: 12px; color: var(--ink-soft); }
   .vcard .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--brass); border-radius: 3px 0 0 3px; }
   .vcard-hero { grid-column: 1 / -1; background: var(--surface-2); border-color: var(--brass); }
-  .vcard-hero .bar { width: 5px; background: var(--brand); }
-  .vcard-hero .idx { color: var(--brand); }
+  .vcard-hero .bar { width: 5px; background: var(--brass); }
+  .vcard-hero .idx { color: var(--brass); }
   .vcard-hero h3 { font-size: 1.6rem; }
   .vcard-hero p { max-width: 62ch; font-size: 1.06rem; }
 
@@ -232,7 +238,7 @@
   .fineprint { margin-top: 14px; font-family: var(--mono); font-size: 0.68rem; color: var(--ink-soft); letter-spacing: 0.04em; }
   .success { display: none; text-align: center; padding: 24px 10px; }
   .success.on { display: block; }
-  .success .mark { font-family: var(--serif); font-size: 2rem; color: var(--brand); }
+  .success .mark { font-family: var(--serif); font-size: 2rem; color: var(--brass); }
   .success p { margin-top: 10px; color: var(--ink-soft); }
   form.card.hide { display: none; }
 
@@ -272,7 +278,7 @@
   <div class="wrap bar-in">
     <div class="brandmark">
       <svg class="seal-mini" viewBox="0 0 40 40" role="img" aria-label="Sonoma Proof seal">
-        <circle cx="20" cy="20" r="18" fill="var(--band)" stroke="var(--brass)" stroke-width="2.4"/>
+        <circle cx="20" cy="20" r="18" fill="var(--seal)" stroke="var(--brass)" stroke-width="2.4"/>
         <circle cx="20" cy="20" r="14.6" fill="none" stroke="var(--brass)" stroke-width="0.8" stroke-dasharray="1 2.6"/>
         <g fill="var(--brass)">
           <circle cx="16.4" cy="16.8" r="2.1"/><circle cx="23.6" cy="16.8" r="2.1"/>
@@ -438,7 +444,7 @@
       </div>
       <div class="seal-wrap reveal">
         <svg class="seal" viewBox="0 0 220 220" role="img" aria-label="Sonoma Proof member seal">
-          <circle cx="110" cy="110" r="104" fill="var(--band)" stroke="var(--brass)" stroke-width="4"/>
+          <circle cx="110" cy="110" r="104" fill="var(--seal)" stroke="var(--brass)" stroke-width="4"/>
           <circle cx="110" cy="110" r="93" fill="none" stroke="var(--brass)" stroke-width="1" stroke-dasharray="2 5" stroke-opacity="0.85"/>
           <g fill="var(--brass)">
             <circle cx="103" cy="52" r="5"/><circle cx="117" cy="52" r="5"/>
@@ -609,7 +615,7 @@
   <div class="wrap foot">
     <div class="brandmark">
       <svg class="seal-mini" viewBox="0 0 40 40" role="img" aria-label="Sonoma Proof seal">
-        <circle cx="20" cy="20" r="18" fill="var(--band)" stroke="var(--brass)" stroke-width="2.4"/>
+        <circle cx="20" cy="20" r="18" fill="var(--seal)" stroke="var(--brass)" stroke-width="2.4"/>
         <circle cx="20" cy="20" r="14.6" fill="none" stroke="var(--brass)" stroke-width="0.8" stroke-dasharray="1 2.6"/>
         <g fill="var(--brass)">
           <circle cx="16.4" cy="16.8" r="2.1"/><circle cx="23.6" cy="16.8" r="2.1"/>
