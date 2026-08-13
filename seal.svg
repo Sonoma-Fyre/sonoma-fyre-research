@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Sonoma Proof member seal">
+  <circle cx="110" cy="110" r="104" fill="#143966" stroke="#C9A227" stroke-width="4"/>
+  <circle cx="110" cy="110" r="93" fill="none" stroke="#C9A227" stroke-width="1" stroke-dasharray="2 5" stroke-opacity="0.85"/>
+  <g fill="#D8B23A">
+    <circle cx="103" cy="52" r="5"/><circle cx="117" cy="52" r="5"/>
+    <circle cx="110" cy="62" r="5"/><circle cx="96" cy="62" r="5"/><circle cx="124" cy="62" r="5"/>
+  </g>
+  <text x="110" y="112" text-anchor="middle" fill="#D8B23A" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="30" font-weight="600" letter-spacing="1">SONOMA</text>
+  <text x="110" y="142" text-anchor="middle" fill="#D8B23A" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="30" font-weight="600" letter-spacing="1">PROOF</text>
+  <text x="110" y="170" text-anchor="middle" fill="#EAF2FC" fill-opacity="0.72" font-family="ui-monospace, Menlo, monospace" font-size="10" letter-spacing="3">MEMBER</text>
+</svg>
