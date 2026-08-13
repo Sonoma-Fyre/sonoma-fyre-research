@@ -1,0 +1,618 @@
+<!-- Sonoma Proof growth lab. Concept prototype for the team's solution direction. Author: Rohit Mishra. Date: 2026-08-13. Illustrative concept, not researched fact. See readme.md. -->
+<title>Sonoma Proof, a Growth Lab for Small Business</title>
+<style>
+  :root {
+    --paper: #ECE3D0;
+    --surface: #F4EEDF;
+    --surface-2: #E0D6BE;
+    --ink: #1F2F3E;
+    --ink-soft: #55636E;
+    --line: #D6CBB2;
+    --brand: #2E5069;
+    --brand-hi: #3C6788;
+    --on-brand: #F4EEDF;
+    --moss: #446070;
+    --brass: #BF852A;
+    --focus: #2E5069;
+    --band: #234255;
+    --on-band: #F1E7CF;
+    --maxw: 1120px;
+
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #14202B;
+      --surface: #1D2C39;
+      --surface-2: #263847;
+      --ink: #EDE4D0;
+      --ink-soft: #A7B3BC;
+      --line: #2C3E4C;
+      --brand: #6FA0BF;
+      --brand-hi: #8AB6D2;
+      --on-brand: #14202B;
+      --moss: #8FB0C2;
+      --brass: #D9AC53;
+      --focus: #6FA0BF;
+    }
+  }
+  :root[data-theme="light"] {
+    --paper: #ECE3D0; --surface: #F4EEDF; --surface-2: #E0D6BE; --ink: #1F2F3E;
+    --ink-soft: #55636E; --line: #D6CBB2; --brand: #2E5069; --brand-hi: #3C6788;
+    --on-brand: #F4EEDF; --moss: #446070; --brass: #BF852A; --focus: #2E5069;
+  }
+  :root[data-theme="dark"] {
+    --paper: #14202B; --surface: #1D2C39; --surface-2: #263847; --ink: #EDE4D0;
+    --ink-soft: #A7B3BC; --line: #2C3E4C; --brand: #6FA0BF; --brand-hi: #8AB6D2;
+    --on-brand: #14202B; --moss: #8FB0C2; --brass: #D9AC53; --focus: #6FA0BF;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+  .narrow { max-width: 720px; }
+
+  h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.08; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6.2vw, 4.4rem); }
+  h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); }
+  h3 { font-size: 1.28rem; line-height: 1.2; }
+  p { margin: 0; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--moss);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 22px; height: 1px;
+    background: var(--brass);
+    display: inline-block;
+  }
+
+  a { color: var(--brand); text-decoration: none; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 2px;
+  }
+
+  /* Buttons */
+  .btn {
+    font-family: var(--sans);
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 13px 24px;
+    border-radius: 999px;
+    border: 1px solid var(--brand);
+    cursor: pointer;
+    display: inline-block;
+    transition: background .18s ease, color .18s ease, transform .18s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--brand); color: var(--on-brand); }
+  .btn-primary:hover { background: var(--brand-hi); border-color: var(--brand-hi); }
+  .btn-ghost { background: transparent; color: var(--brand); }
+  .btn-ghost:hover { background: var(--surface-2); }
+
+  /* Top bar */
+  header.bar {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-in { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+  .word { font-family: var(--serif); font-size: 1.24rem; font-weight: 600; letter-spacing: -0.01em; display: flex; align-items: baseline; gap: 9px; }
+  .word small { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--moss); font-weight: 400; }
+  .bar .btn { padding: 9px 16px; font-size: 0.9rem; }
+
+  section { padding: clamp(64px, 9vw, 118px) 0; }
+  section + section { border-top: 1px solid var(--line); }
+
+  /* Hero */
+  .hero { padding-top: clamp(60px, 8vw, 96px); padding-bottom: clamp(56px, 7vw, 92px); }
+  .hero h1 { margin-top: 22px; max-width: 15ch; }
+  .hero-lede { margin-top: 26px; font-size: 1.24rem; line-height: 1.5; color: var(--ink-soft); max-width: 54ch; }
+  .hero-lede b { color: var(--ink); font-weight: 600; }
+  .cta-row { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px; }
+
+  .ledger {
+    margin-top: 52px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-family: var(--mono);
+  }
+  .ledger div { padding: 18px 4px 18px 0; border-right: 1px solid var(--line); }
+  .ledger div:last-child { border-right: 0; }
+  .ledger .n { font-size: 1.7rem; color: var(--brand); font-variant-numeric: tabular-nums; }
+  .ledger .k { display: block; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 6px; }
+
+  /* generic section head */
+  .head { max-width: 760px; }
+  .head h2 { margin-top: 16px; }
+  .head p { margin-top: 18px; color: var(--ink-soft); font-size: 1.12rem; }
+
+  /* Problem: old-way list */
+  .oldway { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .oldway li { list-style: none; background: var(--paper); padding: 26px 24px; }
+  .oldway .tag { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand); }
+  .oldway h3 { margin-top: 12px; font-size: 1.14rem; }
+  .oldway p { margin-top: 9px; color: var(--ink-soft); font-size: 0.98rem; }
+
+  /* Steps */
+  .steps { margin-top: 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+  .step { border-top: 2px solid var(--brand); padding-top: 18px; }
+  .step .num { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em; color: var(--brass); }
+  .step h3 { margin-top: 10px; }
+  .step p { margin-top: 10px; color: var(--ink-soft); font-size: 0.98rem; }
+
+  /* Value grid */
+  .value { background: var(--surface); }
+  .vgrid { margin-top: 46px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .vcard { background: var(--paper); border: 1px solid var(--line); border-radius: 3px; padding: 30px 30px 32px; position: relative; }
+  .vcard .idx { font-family: var(--mono); font-size: 0.72rem; color: var(--moss); letter-spacing: 0.1em; }
+  .vcard h3 { margin-top: 14px; }
+  .vcard p { margin-top: 12px; color: var(--ink-soft); }
+  .vcard .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--brass); border-radius: 3px 0 0 3px; }
+  .vcard-hero { grid-column: 1 / -1; background: var(--surface-2); border-color: var(--brass); }
+  .vcard-hero .bar { width: 5px; background: var(--brand); }
+  .vcard-hero .idx { color: var(--brand); }
+  .vcard-hero h3 { font-size: 1.6rem; }
+  .vcard-hero p { max-width: 62ch; font-size: 1.06rem; }
+
+  /* Trail / unlock */
+  .unlock { background: var(--band); color: var(--on-band); }
+  .unlock .eyebrow { color: color-mix(in srgb, var(--on-band) 82%, transparent); }
+  .unlock .eyebrow::before { background: var(--brass); }
+  .unlock h2 { color: var(--on-band); max-width: 18ch; }
+  .unlock .head p { color: color-mix(in srgb, var(--on-band) 84%, transparent); }
+  .trail { margin-top: 46px; width: 100%; height: auto; display: block; }
+  .events-intro { margin-top: 30px; color: color-mix(in srgb, var(--on-band) 86%, transparent); font-size: 1.12rem; max-width: 62ch; }
+  .events-intro b { color: var(--on-band); }
+  .examples { margin-top: 22px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .ex { background: color-mix(in srgb, var(--on-band) 9%, transparent); border: 1px solid color-mix(in srgb, var(--on-band) 24%, transparent); border-radius: 8px; padding: 24px 24px 26px; }
+  .ex h3 { color: var(--on-band); font-size: 1.16rem; }
+  .ex p { margin-top: 9px; color: color-mix(in srgb, var(--on-band) 82%, transparent); font-size: 0.96rem; }
+  .ex-lead { background: color-mix(in srgb, var(--brass) 20%, transparent); border-color: color-mix(in srgb, var(--brass) 45%, transparent); }
+  .ex-lead h3 { font-size: 1.45rem; margin-top: 10px; }
+  .ex-lead p { font-size: 1.02rem; }
+  .extag { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--band); background: var(--brass); padding: 4px 9px; border-radius: 999px; }
+  .formats { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 6px; padding-top: 22px; border-top: 1px solid color-mix(in srgb, var(--on-band) 22%, transparent); }
+  .fmt-label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in srgb, var(--on-band) 70%, transparent); }
+  .fmt-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .fmt-chips span { font-size: 0.9rem; color: var(--on-band); border: 1px solid color-mix(in srgb, var(--on-band) 30%, transparent); padding: 7px 13px; border-radius: 999px; }
+
+  /* Mark / seal */
+  .mark { background: var(--surface); }
+  .mark-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 52px; align-items: center; }
+  .seal-wrap { display: flex; justify-content: center; }
+  .seal { width: 100%; max-width: 270px; height: auto; display: block; filter: drop-shadow(0 8px 20px color-mix(in srgb, var(--ink) 14%, transparent)); }
+
+  /* Who */
+  .gallery { margin-top: 46px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .gcard { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .gcard svg { display: block; width: 100%; height: auto; }
+  .gcap { padding: 16px 20px 20px; }
+  .gcap h3 { font-size: 1.12rem; }
+  .gcap p { margin-top: 7px; color: var(--ink-soft); font-size: 0.92rem; }
+
+  /* Apply */
+  .apply { background: var(--surface); }
+  .apply-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .apply .head p { color: var(--ink-soft); }
+  form.card { background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 30px; }
+  .field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
+  .field label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+  .field input, .field textarea {
+    font-family: var(--sans); font-size: 1rem; color: var(--ink);
+    background: var(--surface); border: 1px solid var(--line); border-radius: 3px;
+    padding: 12px 13px; width: 100%; resize: vertical;
+  }
+  form.card .btn { width: 100%; margin-top: 4px; }
+  .fineprint { margin-top: 14px; font-family: var(--mono); font-size: 0.68rem; color: var(--ink-soft); letter-spacing: 0.04em; }
+  .success { display: none; text-align: center; padding: 24px 10px; }
+  .success.on { display: block; }
+  .success .mark { font-family: var(--serif); font-size: 2rem; color: var(--brand); }
+  .success p { margin-top: 10px; color: var(--ink-soft); }
+  form.card.hide { display: none; }
+
+  footer { padding: 40px 0 56px; border-top: 1px solid var(--line); }
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: baseline; }
+  .foot .word small { color: var(--ink-soft); }
+  .foot p { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; color: var(--ink-soft); }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    * { scroll-behavior: auto !important; }
+  }
+
+  @media (max-width: 860px) {
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .oldway { grid-template-columns: 1fr; }
+    .examples { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+    .mark-grid { grid-template-columns: 1fr; gap: 30px; }
+    .seal-wrap { order: -1; }
+    .apply-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .ledger { grid-template-columns: repeat(2, 1fr); }
+    .ledger div:nth-child(2) { border-right: 0; }
+    .vgrid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: 1fr; }
+  }
+</style>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <div class="word">Sonoma&nbsp;Proof <small>Growth Lab</small></div>
+    <a class="btn btn-primary" href="#apply">Apply</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow reveal">Growth Lab &middot; Sonoma &middot; Founding Cohort 2026</span>
+      <h1 class="reveal">Stop growing your business alone.</h1>
+      <p class="hero-lede reveal">Sonoma Proof is a three-day growth lab for small business owners. Learn what actually moves revenue. Build one real experiment on your own business. Combine forces with the cohort to pull customers to all of you. And get in front of the <b>grants, funding, and investors</b> most owners never reach.</p>
+      <div class="cta-row reveal">
+        <a class="btn btn-primary" href="#apply">Apply for the founding cohort</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <div class="ledger reveal">
+        <div><span class="n">3</span><span class="k">Days in Sonoma</span></div>
+        <div><span class="n">10</span><span class="k">Owners per cohort</span></div>
+        <div><span class="n">2</span><span class="k">Shared events per cohort</span></div>
+        <div><span class="n">90</span><span class="k">Days running it together</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="problem">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">The problem</span>
+        <h2>You're experimenting on your own. Slowly, and expensively.</h2>
+        <p>Demand is soft and costs are up. Every owner runs the same trial and error in isolation, with no direction and no one to test ideas against. The usual moves don't fix it.</p>
+      </div>
+      <ul class="oldway reveal">
+        <li>
+          <span class="tag">Alone</span>
+          <h3>You do your own thing and struggle</h3>
+          <p>No feedback loop, no benchmark, no one who has solved it before.</p>
+        </li>
+        <li>
+          <span class="tag">Discount</span>
+          <h3>You run promos that erode margin</h3>
+          <p>Discounts buy a slow week and train customers to wait for the next one.</p>
+        </li>
+        <li>
+          <span class="tag">Solo deals</span>
+          <h3>You cobble partnerships together yourself</h3>
+          <p>One-off collabs that fizzle because no one owns the follow-through.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">How it works</span>
+        <h2>Come learn, bond, experiment, apply.</h2>
+        <p>Three days built as a sprint, not a seminar. Every block ends with something you can use the moment you get back.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="num">01 / Learn</div>
+          <h3>Know what drives growth</h3>
+          <p>Your real numbers, sharper positioning, and the few levers that actually move revenue.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">02 / Bond</div>
+          <h3>Build your cohort</h3>
+          <p>Three days with owners who get it. The room becomes the board of advisors you never had.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">03 / Experiment</div>
+          <h3>Design one real bet</h3>
+          <p>Build a launch-ready experiment on your own business. A new revenue stream, a new experience.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">04 / Apply</div>
+          <h3>Leave with a plan</h3>
+          <p>A 90-day plan the cohort holds you to, and one shared experience you launch together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="value">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">What you leave with</span>
+        <h2>Four things worth more than the price of the seat.</h2>
+      </div>
+      <div class="vgrid">
+        <div class="vcard reveal"><span class="bar"></span><span class="idx">Outcome 01</span><h3>New revenue streams</h3><p>Experiences and offers that monetize your slow days, empty rooms, and idle assets.</p></div>
+        <div class="vcard reveal"><span class="bar"></span><span class="idx">Outcome 02</span><h3>A sharper customer experience</h3><p>Optimized from the first click to the repeat visit, so more visitors turn into regulars.</p></div>
+        <div class="vcard reveal"><span class="bar"></span><span class="idx">Outcome 03</span><h3>New customers</h3><p>Borrow the cohort's audiences through combined experiences that market every business at once.</p></div>
+        <div class="vcard vcard-hero reveal"><span class="bar"></span><span class="idx">Outcome 04 &middot; Unlocked when you finish</span><h3>Grants, capital, and investors</h3><p>Complete the lab and unlock access to grant funding, small-business capital, and investors who back growing local businesses. Grants are reserved for owners who graduate, so the ones who do the work get the door opened.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="unlock">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">The unlock</span>
+        <h2>Alone you have one audience. Together you have ten.</h2>
+        <p>The cohort combines its experiments into two shared events each quarter, a passport and a culinary day. Every business markets to every other's customers at once. Each new cohort adds to a growing network, so the draw compounds. That is the thing you cannot build alone.</p>
+      </div>
+      <svg class="trail reveal" viewBox="0 0 1000 220" role="img" aria-label="Ten individual businesses connecting into one shared experience">
+        <g fill="none" stroke="var(--on-band)" stroke-opacity="0.45" stroke-width="1.5">
+          <path d="M70 60 C 300 60, 520 110, 700 110" />
+          <path d="M70 110 C 320 110, 520 110, 700 110" />
+          <path d="M70 160 C 300 160, 520 110, 700 110" />
+          <path d="M180 40 C 380 40, 540 108, 700 110" />
+          <path d="M180 180 C 380 180, 540 112, 700 110" />
+        </g>
+        <g fill="var(--on-band)">
+          <circle cx="70" cy="60" r="6"/><circle cx="70" cy="110" r="6"/><circle cx="70" cy="160" r="6"/>
+          <circle cx="180" cy="40" r="6"/><circle cx="180" cy="180" r="6"/>
+          <circle cx="300" cy="72" r="6"/><circle cx="300" cy="150" r="6"/>
+          <circle cx="180" cy="110" r="6"/><circle cx="300" cy="110" r="6"/><circle cx="70" cy="110" r="6"/>
+        </g>
+        <circle cx="700" cy="110" r="16" fill="var(--brass)"/>
+        <circle cx="700" cy="110" r="27" fill="none" stroke="var(--brass)" stroke-opacity="0.7" stroke-width="1.5"/>
+        <text x="742" y="106" fill="var(--on-band)" font-family="ui-monospace, Menlo, monospace" font-size="15" letter-spacing="1">TWO SHARED</text>
+        <text x="742" y="126" fill="var(--on-band)" font-family="ui-monospace, Menlo, monospace" font-size="15" letter-spacing="1">EVENTS &#8594;</text>
+      </svg>
+      <p class="events-intro reveal">Each cohort builds and runs <b>two signature events</b> over the quarter. Two dates on the calendar, two reasons for a whole town's worth of customers to show up.</p>
+      <div class="examples reveal">
+        <article class="ex ex-lead">
+          <span class="extag">Event one</span>
+          <h3>The Sonoma Passport</h3>
+          <p>One pass, a stamp at every business in the cohort, a reward for finishing the trail. Each owner routes their regulars to all the others.</p>
+        </article>
+        <article class="ex ex-lead">
+          <span class="extag">Event two</span>
+          <h3>Culinary Delight Day</h3>
+          <p>A single day when every kitchen and tasting room in the cohort puts on a special, and one ticket walks guests through all of them.</p>
+        </article>
+        <div class="formats">
+          <span class="fmt-label">Other formats a cohort can pick from</span>
+          <div class="fmt-chips">
+            <span>Scavenger hunts</span>
+            <span>Consolidated discounts</span>
+            <span>Progressive dinners</span>
+            <span>Seasonal markets</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mark">
+    <div class="wrap mark-grid">
+      <div class="head reveal">
+        <span class="eyebrow">The mark</span>
+        <h2>A seal customers learn to trust.</h2>
+        <p>Graduates earn the Sonoma Proof mark to display on the door, the menu, the window. As the network grows, customers come to read it as a promise: a business that does the work to get better. Your membership becomes walk-in traffic.</p>
+      </div>
+      <div class="seal-wrap reveal">
+        <svg class="seal" viewBox="0 0 220 220" role="img" aria-label="Sonoma Proof member seal">
+          <circle cx="110" cy="110" r="104" fill="var(--paper)" stroke="var(--brass)" stroke-width="3"/>
+          <circle cx="110" cy="110" r="93" fill="none" stroke="var(--brass)" stroke-width="1" stroke-dasharray="2 5"/>
+          <g fill="var(--brass)">
+            <circle cx="103" cy="52" r="5"/><circle cx="117" cy="52" r="5"/>
+            <circle cx="110" cy="62" r="5"/><circle cx="96" cy="62" r="5"/><circle cx="124" cy="62" r="5"/>
+          </g>
+          <text x="110" y="112" text-anchor="middle" fill="var(--brand)" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="30" font-weight="600" letter-spacing="1">SONOMA</text>
+          <text x="110" y="142" text-anchor="middle" fill="var(--brand)" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="30" font-weight="600" letter-spacing="1">PROOF</text>
+          <text x="110" y="170" text-anchor="middle" fill="var(--ink-soft)" font-family="ui-monospace, Menlo, monospace" font-size="10" letter-spacing="3">MEMBER</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="quarter">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">The quarter that follows</span>
+        <h2>The three days start it. The quarter proves it.</h2>
+        <p>Plans die when everyone goes home. So the work does not end on day three. The cohort runs its experiments and combined experiences over the next three months, together, and checks in every month to stay accountable for actually shipping.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="num">Month 01 · Launch</div>
+          <h3>Ship the first bet</h3>
+          <p>Every owner launches their own experiment, and the cohort locks dates for its two shared events.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">Month 02 · Run</div>
+          <h3>Run it together</h3>
+          <p>The combined experience goes live. Owners trade what is working and fix what is not, on a monthly check-in.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">Month 03 · Prove</div>
+          <h3>Measure the lift</h3>
+          <p>Count the new customers and revenue, then graduate. Finishing the quarter is what unlocks grant access.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="who">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">Who it's for</span>
+        <h2>The businesses that make Sonoma.</h2>
+        <p>Operating small businesses with doors open and customers coming in, that know there is another gear and want a room of peers to find it with. Not first-week startups.</p>
+      </div>
+      <div class="gallery">
+        <figure class="gcard reveal">
+          <svg viewBox="0 0 240 150" role="img" aria-label="Winery with vineyard rows">
+            <rect width="240" height="150" fill="var(--surface-2)"/>
+            <circle cx="198" cy="40" r="17" fill="var(--brass)"/>
+            <path d="M0 104 Q70 80 150 100 T240 92 V150 H0 Z" fill="var(--brand)" opacity="0.35"/>
+            <path d="M0 120 Q90 100 170 116 T240 110 V150 H0 Z" fill="var(--brand)"/>
+            <g stroke="var(--brass)" stroke-width="2.4" stroke-linecap="round" opacity="0.9">
+              <line x1="26" y1="128" x2="26" y2="112"/><line x1="52" y1="130" x2="52" y2="113"/>
+              <line x1="78" y1="128" x2="78" y2="112"/><line x1="104" y1="129" x2="104" y2="114"/>
+              <line x1="130" y1="127" x2="130" y2="113"/>
+            </g>
+          </svg>
+          <figcaption class="gcap"><h3>Wineries</h3><p>Tasting rooms facing softer demand and a crowded field.</p></figcaption>
+        </figure>
+
+        <figure class="gcard reveal">
+          <svg viewBox="0 0 240 150" role="img" aria-label="Cafe storefront">
+            <rect width="240" height="150" fill="var(--surface-2)"/>
+            <rect x="52" y="66" width="136" height="70" fill="var(--brand)"/>
+            <rect x="44" y="52" width="152" height="16" fill="var(--brass)"/>
+            <g fill="var(--surface-2)" opacity="0.5"><rect x="60" y="52" width="8" height="16"/><rect x="92" y="52" width="8" height="16"/><rect x="124" y="52" width="8" height="16"/><rect x="156" y="52" width="8" height="16"/></g>
+            <rect x="108" y="96" width="24" height="40" fill="var(--brass)"/>
+            <rect x="68" y="82" width="26" height="22" fill="var(--surface)" opacity="0.6"/>
+            <rect x="146" y="82" width="26" height="22" fill="var(--surface)" opacity="0.6"/>
+          </svg>
+          <figcaption class="gcap"><h3>Cafes &amp; bakeries</h3><p>Morning regulars, quiet afternoons, thin margins.</p></figcaption>
+        </figure>
+
+        <figure class="gcard reveal">
+          <svg viewBox="0 0 240 150" role="img" aria-label="Restaurant with string lights">
+            <rect width="240" height="150" fill="var(--surface-2)"/>
+            <path d="M20 44 Q120 74 220 44" fill="none" stroke="var(--brand)" stroke-width="1.5" opacity="0.6"/>
+            <g fill="var(--brass)"><circle cx="44" cy="52" r="4"/><circle cx="80" cy="60" r="4"/><circle cx="120" cy="64" r="4"/><circle cx="160" cy="60" r="4"/><circle cx="196" cy="52" r="4"/></g>
+            <rect x="56" y="78" width="128" height="58" fill="var(--brand)"/>
+            <rect x="112" y="98" width="16" height="38" fill="var(--brass)"/>
+            <rect x="72" y="92" width="24" height="20" fill="var(--surface)" opacity="0.6"/>
+            <rect x="144" y="92" width="24" height="20" fill="var(--surface)" opacity="0.6"/>
+          </svg>
+          <figcaption class="gcap"><h3>Restaurants</h3><p>Full on Fridays, empty early week. Room to grow.</p></figcaption>
+        </figure>
+
+        <figure class="gcard reveal">
+          <svg viewBox="0 0 240 150" role="img" aria-label="Food truck">
+            <rect width="240" height="150" fill="var(--surface-2)"/>
+            <rect x="40" y="70" width="150" height="46" rx="6" fill="var(--brand)"/>
+            <rect x="150" y="82" width="40" height="34" rx="4" fill="var(--brand)"/>
+            <rect x="58" y="80" width="70" height="20" fill="var(--brass)"/>
+            <rect x="52" y="66" width="82" height="10" fill="var(--brass)" opacity="0.7"/>
+            <circle cx="74" cy="122" r="12" fill="var(--ink)"/><circle cx="74" cy="122" r="5" fill="var(--surface-2)"/>
+            <circle cx="164" cy="122" r="12" fill="var(--ink)"/><circle cx="164" cy="122" r="5" fill="var(--surface-2)"/>
+          </svg>
+          <figcaption class="gcap"><h3>Food trucks &amp; makers</h3><p>Mobile, scrappy, ready to build a following.</p></figcaption>
+        </figure>
+
+        <figure class="gcard reveal">
+          <svg viewBox="0 0 240 150" role="img" aria-label="Retail shop">
+            <rect width="240" height="150" fill="var(--surface-2)"/>
+            <rect x="58" y="60" width="124" height="76" fill="var(--brand)"/>
+            <path d="M50 60 L120 34 L190 60 Z" fill="var(--brass)"/>
+            <rect x="74" y="80" width="40" height="34" fill="var(--surface)" opacity="0.6"/>
+            <rect x="128" y="96" width="22" height="40" fill="var(--brass)"/>
+            <circle cx="139" cy="116" r="2.2" fill="var(--brand)"/>
+          </svg>
+          <figcaption class="gcap"><h3>Specialty retail</h3><p>Local shops that live or die by foot traffic.</p></figcaption>
+        </figure>
+
+        <figure class="gcard reveal">
+          <svg viewBox="0 0 240 150" role="img" aria-label="Tasting room with wine glass">
+            <rect width="240" height="150" fill="var(--surface-2)"/>
+            <rect x="44" y="56" width="152" height="80" fill="var(--brand)"/>
+            <rect x="60" y="72" width="120" height="40" fill="var(--surface)" opacity="0.5"/>
+            <path d="M112 84 h20 l-3 14 a7 7 0 0 1 -14 0 Z" fill="var(--brass)"/>
+            <line x1="122" y1="98" x2="122" y2="112" stroke="var(--brass)" stroke-width="2.4"/>
+            <line x1="114" y1="112" x2="130" y2="112" stroke="var(--brass)" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+          <figcaption class="gcap"><h3>Tasting rooms &amp; hospitality</h3><p>Experiences that can pull in a whole new crowd.</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="apply" id="apply">
+    <div class="wrap apply-grid">
+      <div class="head reveal">
+        <span class="eyebrow">Founding cohort &middot; Limited to 10</span>
+        <h2>Apply to join.</h2>
+        <p>Three days in Sonoma. Ten owners. One shared experience, and a plan to grow. Tell us about your business and what you would change if you had the room behind you.</p>
+      </div>
+      <div class="reveal">
+        <form class="card" id="applyForm" novalidate>
+          <div class="field">
+            <label for="n">Your name</label>
+            <input id="n" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="b">Business name</label>
+            <input id="b" name="business" type="text" required>
+          </div>
+          <div class="field">
+            <label for="e">Email</label>
+            <input id="e" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="g">What would you grow?</label>
+            <textarea id="g" name="goal" rows="3" placeholder="The one thing you'd change in the next 90 days."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Request an invite</button>
+          <p class="fineprint">Prototype &middot; concept test, no data is sent anywhere.</p>
+        </form>
+        <div class="success" id="ok" role="status" aria-live="polite">
+          <div class="mark">You're on the list.</div>
+          <p>Thanks. If this were live, we'd follow up to learn about your business and confirm your seat in the founding cohort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="word">Sonoma&nbsp;Proof <small>Growth Lab for Small Business</small></div>
+    <p>A concept prototype &middot; Learn &middot; Bond &middot; Experiment &middot; Apply</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+    var form = document.getElementById('applyForm');
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      form.classList.add('hide');
+      document.getElementById('ok').classList.add('on');
+      document.getElementById('ok').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  })();
+</script>
