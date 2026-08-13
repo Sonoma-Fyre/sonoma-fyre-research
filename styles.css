@@ -124,8 +124,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .ledger .k { display: block; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: color-mix(in srgb, var(--on-blue) 75%, transparent); margin-top: 6px; }
 
 /* Front-page video */
-.video-section { padding-top: clamp(36px, 5vw, 64px); }
-.video-frame { max-width: 940px; margin: 0 auto; border: 2px solid var(--gold); border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 22px 54px color-mix(in srgb, var(--blue-deep) 24%, transparent); }
+.hero-grid { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 46px; align-items: center; }
+.hero-video { min-width: 0; }
+.video-frame { border: 2px solid var(--gold); border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 22px 54px color-mix(in srgb, var(--blue-deep) 40%, transparent); }
 .video-frame video { display: block; width: 100%; height: auto; }
 
 /* Page header (secondary pages) */
@@ -237,6 +238,7 @@ form.card.hide { display: none; }
   .site-nav a { padding: 13px 28px; }
   .site-nav a.active::after { display: none; }
   .site-nav .nav-apply { margin: 10px 28px; text-align: center; }
+  .hero-grid { grid-template-columns: 1fr; gap: 30px; }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .pillars { grid-template-columns: 1fr; }
   .oldway { grid-template-columns: 1fr; }
