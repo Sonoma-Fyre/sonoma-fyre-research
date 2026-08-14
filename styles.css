@@ -176,6 +176,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* Events */
 .events-intro { margin-top: 30px; font-size: 1.12rem; max-width: 62ch; color: color-mix(in srgb, var(--on-blue) 88%, transparent); }
 .events-intro b { color: var(--gold); }
+.events-intro + .events-intro { margin-top: 14px; color: color-mix(in srgb, var(--on-blue) 70%, transparent); }
 .examples { margin-top: 24px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .ex { background: color-mix(in srgb, var(--on-blue) 8%, transparent); border: 1px solid color-mix(in srgb, var(--on-blue) 22%, transparent); border-radius: 12px; padding: 26px; }
 .ex h3 { color: var(--on-blue); font-size: 1.3rem; }
