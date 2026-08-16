@@ -5,7 +5,7 @@
 - Organization: Sosie Wines
 - Date: 2026-08-03
 - Place: Sosie downtown tasting room, Sonoma
-- Ran by: Rodolfo Lagos
+- Ran by: Rohit Mishra; written up and filed by Rodolfo Lagos
 - Capture: live notes written up afterward, organized by theme, no question ids
 - Raw sources: an RTF field-notes file held locally, not committed
 - Flags: Victoria's last name not recorded, confirm; attempted to reach owner Scott directly, unsuccessful, so the owner-side view is missing; the Sunday foot-traffic figures below are her recollection, not counted records
