@@ -1,14 +1,14 @@
-# Sebastiani interview: Valerie Wilson and Lyn Orweller
+# Sebastiani interview: Valerie Wilson
 
-- Interviewee: Valerie Wilson, and Lyn Orweller
-- Role: Valerie Wilson is tasting room manager; Lyn Orweller's role not recorded
+- Interviewee: Valerie Wilson
+- Role: Tasting room manager
 - Organization: Sebastiani Winery
 - Date: 2026-08-03
 - Place: Sebastiani tasting room, Sonoma
 - Ran by: Rohit Mishra; written up and filed by Rodolfo Lagos
 - Capture: live notes written up afterward, organized by theme, no question ids
 - Raw sources: an RTF field-notes file held locally, not committed
-- Flags: Lyn Orweller's role and title not recorded, confirm; Lyn does not appear in the team interview record log, which records Valerie Wilson as the sole Sebastiani contact, so confirm whether Lyn was present as staff or in another capacity; the tasting-room was empty during the visit, which is itself an observation but not a measurement
+- Flags: the tasting room was empty during the visit, which is an observation but not a measurement
 
 ## Live notes
 
